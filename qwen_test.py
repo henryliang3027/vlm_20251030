@@ -26,11 +26,12 @@ base_model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     torch_dtype=torch.bfloat16,
     device_map="auto",
 )
+base_model.eval()
 
 print("Loading LoRA adapter...")
-model = PeftModel.from_pretrained(base_model, adapter_path)
-model.eval()
-print("Model loaded!")
+finetuned_model = PeftModel.from_pretrained(base_model, adapter_path)
+finetuned_model.eval()
+print("Models loaded!")
 
 # System prompt
 SYSTEM_PROMPT = (
@@ -42,7 +43,7 @@ SYSTEM_PROMPT = (
 
 # Test on test_dataset[0]
 print("\n" + "="*80)
-print("TESTING ON test_dataset[0]")
+print("TESTING ON test_dataset[1]")
 print("="*80)
 
 sample = test_dataset[0]
@@ -74,27 +75,70 @@ inputs = processor(
     images=[image],
     return_tensors="pt",
     padding=True,
-).to(model.device)
+).to(base_model.device)
 
-# Generate
-print("\nGenerating response...")
+print(f"type of inputs: {type(inputs)}")
+
+# Generate with BASE MODEL (no fine-tuning)
+print("\nGenerating response with BASE MODEL...")
 with torch.no_grad():
-    output_ids = model.generate(
+    base_output_ids = base_model.generate(
         **inputs,
         max_new_tokens=1024,
-        do_sample=True,
-        temperature=0.7,
-        top_p=0.95,
+        do_sample=False,
+        # temperature=0.7,
+        # top_p=0.95,
     )
 
-# Decode
-generated_ids = output_ids[:, inputs.input_ids.shape[1]:]
-response = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
+# Decode base model response
+base_generated_ids = base_output_ids[:, inputs.input_ids.shape[1]:]
+base_response = processor.batch_decode(base_generated_ids, skip_special_tokens=True)[0]
 
 print("\n" + "="*80)
-print("MODEL RESPONSE:")
+print("BASE MODEL RESPONSE (Before Fine-tuning):")
 print("="*80)
-print(response)
+print(base_response)
+print("="*80)
+
+# Generate with FINE-TUNED MODEL
+print("\nGenerating response with FINE-TUNED MODEL...")
+inputs_finetuned = processor(
+    text=[prompt],
+    images=[image],
+    return_tensors="pt",
+    padding=True,
+).to(finetuned_model.device)
+
+with torch.no_grad():
+    finetuned_output_ids = finetuned_model.generate(
+        **inputs_finetuned,
+        max_new_tokens=1024,
+        do_sample=False,
+        # temperature=0.7,
+        # top_p=0.95,
+    )
+
+# Decode fine-tuned model response
+finetuned_generated_ids = finetuned_output_ids[:, inputs_finetuned.input_ids.shape[1]:]
+finetuned_response = processor.batch_decode(finetuned_generated_ids, skip_special_tokens=True)[0]
+
+print("\n" + "="*80)
+print("FINE-TUNED MODEL RESPONSE (After Training):")
+print("="*80)
+print(finetuned_response)
+print("="*80)
+
+# Comparison Summary
+print("\n" + "="*80)
+print("COMPARISON SUMMARY")
+print("="*80)
+print(f"Ground Truth: {ground_truth}")
+print("\nBase Model (Before Training):")
+print(f"  - Uses <think></think> format: {'Yes' if '<think>' in base_response and '</think>' in base_response else 'No'}")
+print(f"  - Uses <answer></answer> format: {'Yes' if '<answer>' in base_response and '</answer>' in base_response else 'No'}")
+print("\nFine-tuned Model (After Training):")
+print(f"  - Uses <think></think> format: {'Yes' if '<think>' in finetuned_response and '</think>' in finetuned_response else 'No'}")
+print(f"  - Uses <answer></answer> format: {'Yes' if '<answer>' in finetuned_response and '</answer>' in finetuned_response else 'No'}")
 print("="*80)
 
 # Save image

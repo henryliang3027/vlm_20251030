@@ -45,6 +45,8 @@ SYSTEM_PROMPT = (
 )
 
 def make_conversation(examples):
+    print(f"examples column: {examples.keys()}")
+    print(f"examples image: {type(examples["image"][0])}")
     """Transform function applied on-the-fly to avoid serialization issues with PIL Images"""
     # Handle both batched and non-batched inputs
     is_batched = isinstance(examples["image"], list)
@@ -154,8 +156,14 @@ def accuracy_reward(completions: list[list[dict[str, str]]], solution: list[str]
         if isinstance(completion, list) and len(completion) > 0:
             # Get the last message (assistant's response)
             content = completion[-1].get("content", "") if isinstance(completion[-1], dict) else str(completion[-1])
+            print("="*80)
+            print(f"content 1:" )
+            print(content)
+            print("="*80)
         else:
+            
             content = str(completion)
+            print(f"content 2: {content}" )
 
         # Extract answer from <answer> tags
         answer_match = re.search(r"<answer>\s*(.*?)\s*</answer>", content, re.DOTALL)
