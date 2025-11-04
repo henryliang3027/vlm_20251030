@@ -1,0 +1,202 @@
+[
+    {
+        "image": "1.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Left to right scan: 4 ALISA cans, 4 glass jars, total 8 clearly visible containers.</think> <answer>8</answer>"
+    },
+    {
+        "image": "2.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting salad packages: 2 Caesar Kit bags, 1 Spring Mix bag, total 3 visible packages.</think> <answer>3</answer>"
+    },
+    {
+        "image": "3.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Left to right scan: 5 McVitie's Digestive boxes clearly visible on shelf.</think> <answer>5</answer>"
+    },
+    {
+        "image": "4.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Left to right scan: 1 yellow Sunflower Seed Bread, 1 red Whole Rye Bread package visible.</think> <answer>2</answer>"
+    },
+    {
+        "image": "5.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Left to right: 3 Digestive packages (red/orange), 3 Rich Tea packages (blue). Total 6 biscuit packages.</think> <answer>6</answer>"
+    },
+    {
+        "image": "6.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Top row: 8 bags visible. Bottom row: 8 bags visible. Total 16 Lay's chip bags.</think> <answer>16</answer>"
+    },
+    {
+        "image": "7.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting Loacker wafer boxes: Top row has 8 boxes, bottom row has 8 boxes. Total 16 wafer packages.</think> <answer>16</answer>"
+    },
+    {
+        "image": "8.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting mochi/rice cake packages: 4 different products visible on shelf, each appears to be single package.</think> <answer>4</answer>"
+    },
+    {
+        "image": "9.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting beverage bottles: 1 green milk tea, 2 milk tea bottles (奶茶本味), 1 仙楂洛神 bottle, partial bottles on edges = 4 complete bottles clearly visible.</think><answer>4</answer>"
+    },
+    {
+        "image": "10.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting all Choceur chocolate boxes: 1 Coffee&Cream, 1 Milk Hazelnut, 2 Dark Hazelnut, 2 Milk Crème, 2 Strawberry Yogurt = 8 boxes total.</think> <answer>8</answer>"
+    },
+    {
+        "image": "11.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting La Victoria salsa jars: 4 jars clearly visible in front row, partial jar on left edge.</think> <answer>4</answer>"
+    },
+    {
+        "image": "12.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting olive oil bottles: 3 Bertolli bottles on left, 2 Kroger bottles on right = 5 total bottles.</think> <answer>5</answer>"
+    },
+    {
+        "image": "13.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting instant noodle cups: 4 Indomie cups (red), 2 Maggi Fusian cups (black) = 6 total cups visible.</think> <answer>6</answer>"
+    },
+    {
+        "image": "14.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting Theraflu boxes on shelf: 1 pink Flu & Sore Throat, 1 yellow/orange Severe Cold & Cough, 1 blue Kroger DayTime, 1 green Cold & Cough = 4 boxes total.</think> <answer>4</answer>"
+    },
+    {
+        "image": "15.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting Reese Hearts of Palm jars: 3 jars clearly visible in front row, partial jar visible on left edge = 3 complete jars counted.</think> <answer>3</answer>"
+    },
+    {
+        "image": "16.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting Signature SELECT Pickled Sliced Beets cans: 3 complete cans visible in front row, partial cans on edges.</think> <answer>3</answer>"
+    },
+    {
+        "image": "17.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting egg cartons: 3 cartons stacked on left, 1 carton on right = 4 total egg cartons visible on shelf.</think> <answer>4</answer>"
+    },
+    {
+        "image": "18.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Counting sandwich packages on refrigerated shelf: 2 blueberry & cheese sandwiches, 2 ham & egg sandwiches, partial packages on edges = 4 complete packages visible.</think> <answer>4</answer>"
+    },
+    {
+        "image": "19.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Top shelf: 10 instant noodle cups visible. Bottom shelf: 8 阿Q桶麵 cups visible. Total 20 instant noodle cups.</think> <answer>18</answer>"
+    },
+    {
+        "image": "20.jpg",
+        "question": "How many items are there in the image?",
+        "answer": "<think>Top shelf yellow milk puff packages: approximately 5 visible. Bottom shelf pink strawberry puff packages: approximately 12 visible. Total 17 packages.</think> <answer>17</answer>"
+    },
+    {
+        "image": "1.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>從左到右掃描：4個ALISA罐頭，4個玻璃罐，總共8個清晰可見的容器。</think> <answer>8</answer>"
+    },
+    {
+        "image": "2.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數沙拉包裝：2個Caesar Kit袋，1個Spring Mix袋，總共3個可見包裝。</think> <answer>3</answer>"
+    },
+    {
+        "image": "3.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>從左到右掃描：5個McVitie's Digestive餅乾盒在架子上清晰可見。</think> <answer>5</answer>"
+    },
+    {
+        "image": "4.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>從左到右掃描：1個黃色Sunflower Seed Bread，1個紅色Whole Rye Bread包裝可見。</think> <answer>2</answer>"
+    },
+    {
+        "image": "5.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>從左到右掃描：3個Digestive包裝（紅色/橙色），3個Rich Tea包裝（藍色）。總共6個餅乾包裝。</think> <answer>6</answer>"
+    },
+    {
+        "image": "6.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>上排：8個袋子可見。下排：8個袋子可見。總共16個Lay's薯片袋。</think> <answer>16</answer>"
+    },
+    {
+        "image": "7.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數Loacker威化餅盒：上排有8個盒子，下排有8個盒子。總共16個威化餅包裝。</think> <answer>16</answer>"
+    },
+    {
+        "image": "8.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數麻糬/米糕包裝：架子上可見4種不同產品，每種似乎都是單獨包裝。</think> <answer>4</answer>"
+    },
+    {
+        "image": "9.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數飲料瓶：1個綠色奶茶，2個奶茶瓶（奶茶本味），1個仙楂洛神瓶，邊緣有部分瓶子 = 4個完整瓶子清晰可見。</think><answer>4</answer>"
+    },
+    {
+        "image": "10.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數所有Choceur巧克力盒：1個Coffee&Cream，1個Milk Hazelnut，2個Dark Hazelnut，2個Milk Crème，2個Strawberry Yogurt = 總共8個盒子。</think> <answer>8</answer>"
+    },
+    {
+        "image": "11.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數La Victoria莎莎醬罐：前排清晰可見4個罐子，左邊邊緣有部分罐子。</think> <answer>4</answer>"
+    },
+    {
+        "image": "12.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數橄欖油瓶：左邊有3個Bertolli瓶，右邊有2個Kroger瓶 = 總共5個瓶子。</think> <answer>5</answer>"
+    },
+    {
+        "image": "13.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數即食麵杯：4個Indomie杯（紅色），2個Maggi Fusian杯（黑色）= 總共6個杯子可見。</think> <answer>6</answer>"
+    },
+    {
+        "image": "14.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數Theraflu盒子：1個粉紅色流感和喉嚨痛，1個黃色/橙色重感冒和咳嗽，1個藍色Kroger日間，1個綠色感冒和咳嗽 = 總共4個盒子。</think> <answer>4</answer>"
+    },
+    {
+        "image": "15.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數Reese Hearts of Palm罐：前排清晰可見3個罐子，左邊邊緣有部分罐子 = 總共3個完整罐子。</think> <answer>3</answer>"
+    },
+    {
+        "image": "16.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數Signature SELECT醃製切片甜菜罐：前排清晰可見3個完整罐子，邊緣有部分罐子。</think> <answer>3</answer>"
+    },
+    {
+        "image": "17.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數蛋 carton：左邊堆疊有3個 carton，右邊有1個 carton = 總共4個蛋 carton 可見於架子上。</think> <answer>4</answer>"
+    },
+    {
+        "image": "18.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>計數三明治包裝：2個藍莓奶酪三明治，2個火腿蛋三明治，邊緣有部分包裝 = 總共4個完整包裝可見。</think> <answer>4</answer>"
+    },
+    {
+        "image": "19.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>上排：10個泡麵杯可見。下排：8個阿Q桶麵泡麵杯可見。總共18個泡麵杯。</think> <answer>18</answer>"
+    },
+    {
+        "image": "20.jpg",
+        "question": "圖中有多少個物品?",
+        "answer": "<think>上排黃色牛奶泡芙包裝：大約可見5個。下排粉紅色草莓泡芙包裝：大約可見12個。總共17個包裝。</think> <answer>17</answer>"
+    }
+]

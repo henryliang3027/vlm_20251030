@@ -1,0 +1,41 @@
+images_path,question,answer
+1.jpg,How many items are there in the image?,<think>Left to right scan: 4 ALISA cans, 4 glass jars, total 8 clearly visible containers.</think> <answer>8</answer>
+2.jpg,How many items are there in the image?,<think>Counting salad packages: 2 Caesar Kit bags, 1 Spring Mix bag, total 3 visible packages.</think> <answer>3</answer>
+3.jpg,How many items are there in the image?,<think>Left to right scan: 5 McVitie's Digestive boxes clearly visible on shelf.</think> <answer>5</answer>
+4.jpg,How many items are there in the image?,<think>Left to right scan: 1 yellow Sunflower Seed Bread, 1 red Whole Rye Bread package visible.</think> <answer>2</answer>
+5.jpg,How many items are there in the image?,<think>Left to right: 3 Digestive packages (red/orange), 3 Rich Tea packages (blue). Total 6 biscuit packages.</think> <answer>6</answer>
+6.jpg,How many items are there in the image?,<think>Top row: 8 bags visible. Bottom row: 8 bags visible. Total 16 Lay's chip bags.</think> <answer>16</answer>
+7.jpg,How many items are there in the image?,<think>Counting Loacker wafer boxes: Top row has 8 boxes, bottom row has 8 boxes. Total 16 wafer packages.</think> <answer>16</answer>
+8.jpg,How many items are there in the image?,<think>Counting mochi/rice cake packages: 4 different products visible on shelf, each appears to be single package.</think> <answer>4</answer>
+9.jpg,How many items are there in the image?,<think>Counting beverage bottles: 1 green milk tea, 2 milk tea bottles (奶茶本味), 1 仙楂洛神 bottle, partial bottles on edges = 4 complete bottles clearly visible.</think><answer>4</answer>
+10.jpg,How many items are there in the image?,<think>Counting all Choceur chocolate boxes: 1 Coffee&Cream, 1 Milk Hazelnut, 2 Dark Hazelnut, 2 Milk Crème, 2 Strawberry Yogurt = 8 boxes total.</think> <answer>8</answer>
+11.jpg,How many items are there in the image?,<think>Counting La Victoria salsa jars: 4 jars clearly visible in front row, partial jar on left edge.</think> <answer>4</answer>
+12.jpg,How many items are there in the image?,<think>Counting olive oil bottles: 3 Bertolli bottles on left, 2 Kroger bottles on right = 5 total bottles.</think> <answer>5</answer>
+13.jpg,How many items are there in the image?,<think>Counting instant noodle cups: 4 Indomie cups (red), 2 Maggi Fusian cups (black) = 6 total cups visible.</think> <answer>6</answer>
+14.jpg,How many items are there in the image?,<think>Counting Theraflu boxes on shelf: 1 pink Flu & Sore Throat, 1 yellow/orange Severe Cold & Cough, 1 blue Kroger DayTime, 1 green Cold & Cough = 4 boxes total.</think> <answer>4</answer>
+15.jpg,How many items are there in the image?,<think>Counting Reese Hearts of Palm jars: 3 jars clearly visible in front row, partial jar visible on left edge = 3 complete jars counted.</think> <answer>3</answer>
+16.jpg,How many items are there in the image?,<think>Counting Signature SELECT Pickled Sliced Beets cans: 3 complete cans visible in front row, partial cans on edges.</think> <answer>3</answer>
+17.jpg,How many items are there in the image?,<think>Counting egg cartons: 4 cartons stacked on left, 1 carton on right = 5 total egg cartons visible on shelf.</think> <answer>5</answer>
+18.jpg,How many items are there in the image?,<think>Counting sandwich packages on refrigerated shelf: 2 blueberry & cheese sandwiches, 2 ham & egg sandwiches, partial packages on edges = 4 complete packages visible.</think> <answer>4</answer>
+19.jpg,How many items are there in the image?,<think>Top shelf: 10 instant noodle cups visible. Bottom shelf: 8 阿Q桶麵 cups visible. Total 20 instant noodle cups.</think> <answer>18</answer>
+20.jpg,How many items are there in the image?,<think>Top shelf yellow milk puff packages: approximately 5 visible. Bottom shelf pink strawberry puff packages: approximately 12 visible. Total 17 packages.</think> <answer>17</answer>
+1.jpg,How many items are there in the image?,<think>從左到右掃描：4個ALISA罐頭，4個玻璃罐，總共8個清晰可見的容器。</think> <answer>8</answer>
+2.jpg,How many items are there in the image?,<think>計數沙拉包裝：2個Caesar Kit袋，1個Spring Mix袋，總共3個可見包裝。</think> <answer>3</answer>
+3.jpg,How many items are there in the image?,<think>Left to right scan: 5 McVitie's Digestive boxes clearly visible on shelf.</think> <answer>5</answer>
+4.jpg,How many items are there in the image?,<think>Left to right scan: 1 yellow Sunflower Seed Bread, 1 red Whole Rye Bread package visible.</think> <answer>2</answer>
+5.jpg,How many items are there in the image?,<think>Left to right: 3 Digestive packages (red/orange), 3 Rich Tea packages (blue). Total 6 biscuit packages.</think> <answer>6</answer>
+6.jpg,How many items are there in the image?,<think>Top row: 8 bags visible. Bottom row: 8 bags visible. Total 16 Lay's chip bags.</think> <answer>16</answer>
+7.jpg,How many items are there in the image?,<think>Counting Loacker wafer boxes: Top row has 8 boxes, bottom row has 8 boxes. Total 16 wafer packages.</think> <answer>16</answer>
+8.jpg,How many items are there in the image?,<think>Counting mochi/rice cake packages: 4 different products visible on shelf, each appears to be single package.</think> <answer>4</answer>
+9.jpg,How many items are there in the image?,<think>Counting beverage bottles: 1 green milk tea, 2 milk tea bottles (奶茶本味), 1 仙楂洛神 bottle, partial bottles on edges = 4 complete bottles clearly visible.</think><answer>4</answer>
+10.jpg,How many items are there in the image?,<think>Counting all Choceur chocolate boxes: 1 Coffee&Cream, 1 Milk Hazelnut, 2 Dark Hazelnut, 2 Milk Crème, 2 Strawberry Yogurt = 8 boxes total.</think> <answer>8</answer>
+11.jpg,How many items are there in the image?,<think>Counting La Victoria salsa jars: 4 jars clearly visible in front row, partial jar on left edge.</think> <answer>4</answer>
+12.jpg,How many items are there in the image?,<think>Counting olive oil bottles: 3 Bertolli bottles on left, 2 Kroger bottles on right = 5 total bottles.</think> <answer>5</answer>
+13.jpg,How many items are there in the image?,<think>Counting instant noodle cups: 4 Indomie cups (red), 2 Maggi Fusian cups (black) = 6 total cups visible.</think> <answer>6</answer>
+14.jpg,How many items are there in the image?,<think>Counting Theraflu boxes on shelf: 1 pink Flu & Sore Throat, 1 yellow/orange Severe Cold & Cough, 1 blue Kroger DayTime, 1 green Cold & Cough = 4 boxes total.</think> <answer>4</answer>
+15.jpg,How many items are there in the image?,<think>Counting Reese Hearts of Palm jars: 3 jars clearly visible in front row, partial jar visible on left edge = 3 complete jars counted.</think> <answer>3</answer>
+16.jpg,How many items are there in the image?,<think>Counting Signature SELECT Pickled Sliced Beets cans: 3 complete cans visible in front row, partial cans on edges.</think> <answer>3</answer>
+17.jpg,How many items are there in the image?,<think>Counting egg cartons: 4 cartons stacked on left, 1 carton on right = 5 total egg cartons visible on shelf.</think> <answer>5</answer>
+18.jpg,How many items are there in the image?,<think>Counting sandwich packages on refrigerated shelf: 2 blueberry & cheese sandwiches, 2 ham & egg sandwiches, partial packages on edges = 4 complete packages visible.</think> <answer>4</answer>
+19.jpg,How many items are there in the image?,<think>Top shelf: 10 instant noodle cups visible. Bottom shelf: 8 阿Q桶麵 cups visible. Total 20 instant noodle cups.</think> <answer>18</answer>
+20.jpg,How many items are there in the image?,<think>Top shelf yellow milk puff packages: approximately 5 visible. Bottom shelf pink strawberry puff packages: approximately 12 visible. Total 17 packages.</think> <answer>17</answer>
