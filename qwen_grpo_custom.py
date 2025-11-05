@@ -92,6 +92,9 @@ def make_conversation(examples):
     """Transform function applied on-the-fly to avoid serialization issues with PIL Images"""
     # Handle both batched and non-batched inputs
     is_batched = isinstance(examples["image"], list)
+    print(f"examples column: {examples.keys()}")
+    print(f"examples image: {examples['image'][0]}")
+    print(f"examples problem: {examples['problem'][0]}")
 
     if is_batched:
         conversations = []
@@ -249,10 +252,10 @@ def accuracy_reward(completions: list[list[dict[str, str]]], solution: list[str]
 
 # Configure training arguments using GRPOConfig
 training_args = GRPOConfig(
-    output_dir="Qwen2.5-VL-3B-Custom",
+    output_dir="Qwen2.5-VL-3B-Custom2",
     learning_rate=1e-5,
     remove_unused_columns=False, # to access the solution column in accuracy_reward
-    num_train_epochs=1,
+    num_train_epochs=50,
     bf16=True,
 
     # Parameters that control the data preprocessing

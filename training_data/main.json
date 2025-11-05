@@ -92,7 +92,7 @@
     {
         "image": "19.jpg",
         "question": "How many items are there in the image?",
-        "answer": "<think>Top shelf: 10 instant noodle cups visible. Bottom shelf: 8 阿Q桶麵 cups visible. Total 20 instant noodle cups.</think> <answer>18</answer>"
+        "answer": "<think>Top shelf: 10 instant noodle cups visible. Bottom shelf: 8 阿Q桶麵 cups visible. Total 18 instant noodle cups.</think> <answer>18</answer>"
     },
     {
         "image": "20.jpg",
