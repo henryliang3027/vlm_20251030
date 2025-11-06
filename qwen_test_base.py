@@ -20,43 +20,12 @@ def resize_image(img_pil, max_size=512):
     return img_pil
 
 # Load custom training data from JSON
-json_path = './training_data/main.json'
+
+
 images_dir = './training_data/images'
+MAX_IMAGE_SIZE = 512  # Set maximum image size to fit within token limits
 
-print(f"Loading data from {json_path}...")
-with open(json_path, 'r', encoding='utf-8') as f:
-    data = json.load(f)
 
-# Prepare dataset with resized images
-dataset_list = []
-max_image_size = 512  # Set maximum image size to fit within token limits
-print(f"Resizing images to max size: {max_image_size}x{max_image_size}")
-
-for item in data:
-    image_path = os.path.join(images_dir, item['image'])
-    if os.path.exists(image_path):
-        img = Image.open(image_path).convert('RGB')
-        # Resize image to prevent token overflow
-        img = resize_image(img, max_size=max_image_size)
-        dataset_list.append({
-            'image': img,
-            'problem': item['question'],
-            'solution': item['answer']
-        })
-    else:
-        print(f"Warning: Image {image_path} not found, skipping...")
-
-# Create HuggingFace Dataset
-dataset = Dataset.from_list(dataset_list)
-print(f"Loaded {len(dataset)} samples from custom training data")
-
-split_dataset = dataset.train_test_split(test_size=0.2, seed=42)
-
-train_dataset = split_dataset['train']
-test_dataset = split_dataset['test']
-
-print(f"number of samples in train_dataset: {len(train_dataset)}")
-print(f"number of samples in test_dataset: {len(test_dataset)}")
 
 # Load model
 base_model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
@@ -75,17 +44,18 @@ print("Base model loaded!")
 
 # System prompt
 SYSTEM_PROMPT = (
-    "You are a professional object-counting assistant. 你是一個專業的商品計數助手。 "
-    "The user provides an image and asks you to count all visible products. "
-    "使用者提供圖片，請你數出所有可見的商品數量。使用繁體中文回答。"
-    "Reasoning must be placed inside <think></think>, and the final numeric answer inside <answer></answer>."
+    "你是一個專業的商品計數助手。\n"
+    "使用者會提供圖片並詢問可見商品的數量。\n"
+    "推理過程必須放在 <think></think> 裡，最終的數字答案需用阿拉伯數字回答，不包含單位並放在 <answer></answer> 裡。\n"
+    "如果使用者使用繁體中文提問，請以繁體中文回答。\n"
+    "當問題中同時包含英文品牌名稱與中文語句時，請以繁體中文回答；品牌名稱保持原文不翻譯。\n"
 )
 
 
-image_path = os.path.join(images_dir, '17.jpg')
+image_path = os.path.join(images_dir, '1.jpg')
 img = Image.open(image_path).convert("RGB")
-image = resize_image(img, max_size=max_image_size)
-question = "圖中有幾盒雞蛋？"
+image = resize_image(img, max_size=MAX_IMAGE_SIZE)
+question = "請問圖中有多少個ALISA罐頭？"
 
 print(f"\nQuestion: {question}")
 # print(f"Ground Truth: {ground_truth}")

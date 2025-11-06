@@ -47,9 +47,11 @@ print(f"Loading data from {json_path}...")
 with open(json_path, 'r', encoding='utf-8') as f:
     data = json.load(f)
 
+print(f"Loaded {len(data)} samples from JSON file.")
+
 # Prepare dataset with resized images
 dataset_list = []
-max_image_size = 512  # Set maximum image size to fit within token limits
+max_image_size = 768  # Set maximum image size to fit within token limits
 print(f"Resizing images to max size: {max_image_size}x{max_image_size}")
 
 for item in data:
@@ -67,34 +69,38 @@ for item in data:
         print(f"Warning: Image {image_path} not found, skipping...")
 
 # Create HuggingFace Dataset
-dataset = Dataset.from_list(dataset_list)
-print(f"Loaded {len(dataset)} samples from custom training data")
+train_dataset = Dataset.from_list(dataset_list)
+print(f"Loaded {len(train_dataset)} samples from custom training data")
+print(f"Dataset columns: {train_dataset.column_names}")
 
-split_dataset = dataset.train_test_split(test_size=0.2, seed=42)
+# split_dataset = dataset.train_test_split(test_size=0, seed=42)
 
-train_dataset = split_dataset['train']
-test_dataset = split_dataset['test']
+# print(f"Dataset columns2: {dataset.column_names}")
+
+# train_dataset = split_dataset['train']
+# test_dataset = split_dataset['test']
 
 print(f"number of samples in train_dataset: {len(train_dataset)}")
-print(f"number of samples in test_dataset: {len(test_dataset)}")
+# print(f"number of samples in test_dataset: {len(test_dataset)}")
 
 model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
 processor = AutoProcessor.from_pretrained(model_id, use_fast=True, padding_side="left")
 
 SYSTEM_PROMPT = (
-    "You are a professional object-counting assistant. 你是一個專業的商品計數助手。 "
-    "The user provides an image and asks you to count all visible products. "
-    "使用者提供圖片，請你數出所有可見的商品數量。 "
-    "Reasoning must be placed inside <think></think>, and the final numeric answer inside <answer></answer>."
+    "你是一個專業的商品計數助手。\n"
+    "使用者會提供圖片並詢問可見商品的數量。\n"
+    "推理過程必須放在 <think></think> 裡，最終的數字答案需用阿拉伯數字回答，不包含單位並放在 <answer></answer> 裡。\n"
+    "如果使用者使用繁體中文提問，請以繁體中文回答。\n"
+    "當問題中同時包含英文品牌名稱與中文語句時，請以繁體中文回答；品牌名稱保持原文不翻譯。\n"
 )
 
 def make_conversation(examples):
     """Transform function applied on-the-fly to avoid serialization issues with PIL Images"""
     # Handle both batched and non-batched inputs
     is_batched = isinstance(examples["image"], list)
-    print(f"examples column: {examples.keys()}")
-    print(f"examples image: {examples['image'][0]}")
-    print(f"examples problem: {examples['problem'][0]}")
+    # print(f"examples column: {examples.keys()}")
+    # print(f"examples image: {examples['image'][0]}")
+    # print(f"examples problem: {examples['problem'][0]}")
 
     if is_batched:
         conversations = []
@@ -179,6 +185,8 @@ def format_reward(completions, **kwargs):
 
         # Check if the content matches the expected format
         match = re.search(pattern, content, re.DOTALL)
+
+        # print(f"is match: {bool(match)}")
         rewards.append(1.0 if match else 0.0)
 
     return rewards
@@ -196,66 +204,81 @@ def accuracy_reward(completions: list[list[dict[str, str]]], solution: list[str]
     """
     rewards = []
 
-    for completion, sol in zip(completions, solution):
+    for idx, (completion, sol) in enumerate(zip(completions, solution)):
         # Extract text from conversation format
         if isinstance(completion, list) and len(completion) > 0:
             # Get the last message (assistant's response)
             content = completion[-1].get("content", "") if isinstance(completion[-1], dict) else str(completion[-1])
         else:
             content = str(completion)
-
+        # print('='*20)
+        # print(f"content{idx}: {content},")
+        # print(f"sol{idx}: {sol},")
+        # print('='*20)
         # Extract answer from <answer> tags
-        answer_match = re.search(r"<answer>\s*(.*?)\s*</answer>", content, re.DOTALL)
-        if answer_match:
-            answer_text = answer_match.group(1).strip()
+
+        pattern = r"<answer>\s*(.*?)\s*</answer>"
+        generated_answer_match = re.search(pattern, content, re.DOTALL)
+        if generated_answer_match:
+            generated_answer_text = generated_answer_match.group(1).strip()
         else:
             # If no tags found, use the entire content
-            answer_text = content.strip()
+            generated_answer_text = content.strip()
 
-        try:
-            gold_parsed = parse(sol, extraction_mode="first_match")
-        except Exception as e:
-            gold_parsed = []
+        
 
-        if len(gold_parsed) != 0:
-            # Try parsing predicted answer too
-            try:
-                answer_parsed = parse(
-                    answer_text,
-                    extraction_config=[
-                        LatexExtractionConfig(
-                            normalization_config=NormalizationConfig(
-                                nits=False,
-                                malformed_operators=False,
-                                basic_latex=True,
-                                boxed="all",
-                                units=True,
-                            ),
-                            boxed_match_priority=0,
-                            try_extract_without_anchor=False,
-                        )
-                    ],
-                    extraction_mode="first_match",
-                )
-                reward = float(verify(gold_parsed, answer_parsed))
-            except Exception as e:
-                print(f"verify failed: {e}, answer: {answer_text}, gold: {sol}")
-                reward = None
+        ground_truth_answer_match = re.search(pattern, sol, re.DOTALL)
+        if ground_truth_answer_match:
+            ground_truth_answer_text = ground_truth_answer_match.group(1).strip()
         else:
-            # fallback to text match
-            reward = float(answer_text.strip().lower() == sol.strip().lower())
+            ground_truth_answer_text = sol.strip()
+
+        # Convert the extracted answers to integers for comparison
+        try:
+            generated_answer_int = int(re.findall(r'\d+', generated_answer_text)[0])
+            ground_truth_answer_int = int(re.findall(r'\d+', ground_truth_answer_text)[0])
+
+            # print('='*20)
+            # print(f"generated_answer_int: {generated_answer_int}")
+            # print(f"ground_truth_answer_int: {ground_truth_answer_int}")
+            # print('='*20)
+
+            # Extract answer from <answer> tags
+
+            error = abs(generated_answer_int - ground_truth_answer_int)
+
+            if error == 0:
+                reward = 1.0  # 完全正確
+            elif error == 1:
+                reward = 0.5  # 差1個，給一半分數
+            elif error == 2:
+                reward = 0.2  # 差2個，給一點分數
+            elif error == 3:
+                reward = 0.1  # 差3個，給很少分數
+            else:
+                reward = 0.0  # 差太多
+        except (IndexError, ValueError):
+            # Fallback to string comparison if conversion fails
+            reward = float(generated_answer_text.strip() == ground_truth_answer_text.strip())
+            print("No numeric answer found, fallback to string comparison. Generated: {}, Ground Truth: {}".format(generated_answer_text, ground_truth_answer_text))
+
+        # print(f"answer_text: {generated_answer_text}")
+        # print(f"ground_truth_answer_text: {ground_truth_answer_text}")
+        # print(f"reward: {reward}")
+
 
         rewards.append(reward)
 
+    print(f"rewards length: {len(rewards)}")
     return rewards
 
 
 # Configure training arguments using GRPOConfig
 training_args = GRPOConfig(
-    output_dir="Qwen2.5-VL-3B-Custom2",
+    output_dir="Qwen2.5-VL-3B-Custom-size-768-improved-reward-500epochs",
     learning_rate=1e-5,
     remove_unused_columns=False, # to access the solution column in accuracy_reward
-    num_train_epochs=50,
+    num_train_epochs=500,
     bf16=True,
 
     # Parameters that control the data preprocessing
@@ -272,6 +295,14 @@ training_args = GRPOConfig(
     save_steps=10,
 )
 
+print("="*50)
+print(f"Number of GPUs: {training_args.n_gpu}")
+print(f"Per device batch size: {training_args.per_device_train_batch_size}")
+print(f"Gradient accumulation: {training_args.gradient_accumulation_steps}")
+print(f"Total batch size: {training_args.train_batch_size}")
+print(f"Num generations: {training_args.num_generations}")
+print("="*50)
+
 trainer = GRPOTrainer(
     model=model,
     processing_class=processor,
@@ -281,21 +312,3 @@ trainer = GRPOTrainer(
 )
 
 trainer.train()
-
-# ======================================
-# show one of the samples image and text
-
-# import matplotlib.pyplot as plt
-
-# sample = train_dataset[0]
-# image = sample['image']
-# text = sample['problem']
-
-# plt.figure(figsize=(10, 8))
-# plt.imshow(image)
-# plt.axis('off')
-# plt.title(text)
-# plt.savefig('output.png', bbox_inches='tight', dpi=150)
-# plt.close()
-
-# print("圖片已儲存為 output.png")
