@@ -132,7 +132,7 @@
     {
         "image": "10.jpg",
         "question": "左側貨架區域可以識別出幾種不同顏色的包裝？",
-        "answer": "<think>計算左側貨架顏色：棕/褐色（Coffee & Cream）、黃/金色（Milk Hazelnut）、紅色（Dark Hazelnut - 2盒）。左側區域約有3種明顯不同的顏色類型。</think><answer>3</answer>"
+        "answer": "<think>計算左側貨架顏色：棕/褐色（Coffee & Cream）、黃/金色（Milk Hazelnut）、紅色（Dark Hazelnut 2盒）。左側區域約有3種明顯不同的顏色類型。</think><answer>3</answer>"
     },
     {
         "image": "11.jpg",
@@ -221,6 +221,21 @@
     },
     {
         "image": "19.jpg",
+        "question": "請問上層有幾杯來一客是黃色包裝的？",
+        "answer": "<think>識別黃色包裝：上層左側有2杯明顯的黃色條帶來一客。總共2杯黃色包裝的來一客。</think><answer>2</answer>"
+    },
+    {
+        "image": "19.jpg",
+        "question": "請問上層有幾杯來一客是藍色包裝的？",
+        "answer": "<think>識別藍色包裝：上層右側有2杯藍色條帶的來一客杯麵，包裝清晰可見。總共2杯藍色包裝。</think><answer>2</answer>"
+    },
+    {
+        "image": "19.jpg",
+        "question": "上層有幾杯來一客是紫色或深紫色包裝的？",
+        "answer": "<think>掃描紫色包裝：上層中間有2杯紫色或深紫色條帶的來一客，雖然因為角度或光線顯得較暗，但仍可辨識為紫色包裝。總共2杯紫色包裝。</think><answer>2</answer>"
+    },
+    {
+        "image": "19.jpg",
         "question": "圖中堆疊了幾個阿Q桶麵？",
         "answer": "<think>識別阿Q品牌：下層貨架展示阿Q桶麵，有明顯的橙色包裝和大Q標誌。左側區域顯示4個紅標籤杯子堆疊。右側區域顯示4個藍標籤杯子堆疊。下層貨架總共8個阿Q桶麵。</think><answer>8</answer>"
     },
@@ -268,5 +283,201 @@
         "image": "22.jpg",
         "question": "圖中有幾盒包裝是藍色的？",
         "answer": "<think>識別藍色包裝：前排中間偏右有1盒明顯的藍色鮮乳薄餅包裝。其他盒子是綠色、紅色、棕色等顏色。只有1盒藍色包裝。</think><answer>1</answer>"
+    },
+    {
+        "image": "23.jpg",
+        "question": "圖中有幾瓶的瓶身是綠色的？",
+        "answer": "<think>識別綠色瓶身：從左到右掃描，最左側1瓶有綠色瓶身，中間區域有1瓶綠色瓶身。總共約2瓶綠色瓶身可見。</think><answer>2</answer>"
+    },
+    {
+        "image": "23.jpg",
+        "question": "請問有幾瓶標籤上寫著「黑豆漿」？",
+        "answer": "<think>識別「黑豆漿」文字：右側兩瓶大字清楚顯示「黑豆漿」，黃色瓶蓋配透明瓶身。總共2瓶標示黑豆漿。</think><answer>2</answer>"
+    },
+    {
+        "image": "23.jpg",
+        "question": "圖中有幾瓶的瓶蓋是紅色的？",
+        "answer": "<think>識別紅色瓶蓋：從左到右掃描，中間區域有1瓶紅色瓶蓋。總共約1瓶紅色瓶蓋可見。</think><answer>1</answer>"
+    },
+        {
+        "image": "24.jpg",
+        "question": "請問有幾瓶藍色原味健酪健酪？",
+        "answer": "<think>識別藍色原味健酪：左側區域顯示4瓶藍色包裝的健酪 YoGo Fresh 原味乳酸飲料，瓶身有明顯藍色條紋設計。</think><answer>4</answer>"
+    },
+    {
+        "image": "24.jpg",
+        "question": "圖中有幾瓶是檸檬雪酪口味健酪飲料？",
+        "answer": "<think>掃描檸檬雪酪口味：中間區域有2瓶黃綠色包裝，檸檬雪酪口味的健酪，瓶身有黃色和檸檬圖案。</think><answer>2</answer>"
+    },
+    {
+        "image": "24.jpg",
+        "question": "請問有幾瓶是綠色瓶身的飲料？",
+        "answer": "<think>識別綠色瓶身：最右側有1瓶完整的綠色透明瓶身飲料（奧利多），與左側白色瓶身的健酪系列不同。只有1瓶綠色瓶身。</think><answer>1</answer>"
+    },
+        {
+        "image": "25.jpg",
+        "question": "請問有幾瓶飲料的瓶蓋是白色的？",
+        "answer": "<think>掃描白色瓶蓋：前排所有可見的飲料瓶都有白色瓶蓋。從左到右計數，可見4瓶帶有白色瓶蓋的飲料。</think><answer>4</answer>"
+    },
+    {
+        "image": "25.jpg",
+        "question": "圖中有幾瓶標籤上有橙色條帶？",
+        "answer": "<think>識別橙色條帶：中間3瓶燕麥飲料的標籤上都有明顯的橙色條帶設計。總共3瓶有橙色條帶。</think><answer>3</answer>"
+    },
+    {
+        "image": "25.jpg",
+        "question": "請問左側有幾盒是紫色包裝的葡萄汁？",
+        "answer": "<think>識別紫色葡萄汁：最左側有1盒明顯的紫色包裝，標示「園之味 100% 葡萄汁」和葡萄圖案。只有1盒紫色葡萄汁。</think><answer>1</answer>"
+    },
+    {
+        "image": "26.jpg",
+        "question": "請問上層貨架有幾盒標示「御茶園」品牌的飲料？",
+        "answer": "<think>識別「御茶園」品牌：上層左側第1盒紅色包裝寫著「御茶園 特上紅茶」，第2盒粉色包裝寫著「御茶園 特上奶茶」。總共2盒御茶園品牌飲料。</think><answer>2</answer>"
+    },
+    {
+        "image": "26.jpg",
+        "question": "上層貨架有幾盒標示「波蜜」品牌的果汁？",
+        "answer": "<think>掃描「波蜜」品牌文字：中間綠色包裝寫著「波蜜 芭樂汁 Guava Juice」，旁邊有「波蜜 蔬果汁」（綠色或橙色包裝），右側紫色包裝寫著「波蜜 葡萄汁 Grape Juice」。上層共3盒波蜜品牌。</think><answer>3</answer>"
+    },
+    {
+        "image": "26.jpg",
+        "question": "請問有幾盒標籤上寫著「特上」兩個字？",
+        "answer": "<think>識別「特上」文字：左側第1盒「御茶園 特上 紅茶」有「特上」字樣，第2盒「御茶園 特上 奶茶」也有「特上」字樣。貨架也有標示「御茶園特上奶茶系列」的標籤。上層至少2盒明確標示「特上」。</think><answer>2</answer>"
+    },
+    {
+        "image": "27.jpg",
+        "question": "請問有幾包是黃色包裝的 Mee Baa...gus 泡麵？",
+        "answer": "<think>識別黃色包裝：左側有2包堆疊的黃色包裝 Mee Baa...gus，標示 SOTO AYAM Shiok 口味。總共2包黃色包裝。</think><answer>2</answer>"
+    },
+    {
+        "image": "27.jpg",
+        "question": "圖中有幾包是白色包裝的泡麵？",
+        "answer": "<think>掃描白色包裝：右側有1包堆疊的白色包裝，標示 Perisa ASLI 原味。總共1包白色包裝。</think><answer>1</answer>"
+    },
+    {
+        "image": "27.jpg",
+        "question": "請問總共有幾包 Mee Baa...gus 泡麵在貨架上？",
+        "answer": "<think>計算所有 Mee Baa...gus：左側2包黃色 SOTO AYAM，右側1包白色 Mi Goreng。全部都是 Mee Baa...gus 品牌。總共3包。</think><answer>3</answer>"
+    },
+        {
+        "image": "28.jpg",
+        "question": "請問有幾杯阿Q桶麵的標籤是紅色條帶的？",
+        "answer": "<think>識別紅色條帶標籤：左側列有3杯帶紅色條帶的阿Q桶麵，從上到下堆疊。其他列是藍色和橙色條帶。總共3杯紅色條帶。</think><answer>3</answer>"
+    },
+    {
+        "image": "28.jpg",
+        "question": "圖中有幾杯阿Q桶麵的標籤是藍色條帶的？",
+        "answer": "<think>掃描藍色條帶：中間列顯示3杯帶藍色條帶的阿Q桶麵，從上到下堆疊3層。總共3杯藍色條帶。</think><answer>3</answer>"
+    },
+    {
+        "image": "28.jpg",
+        "question": "請問總共疊了幾杯完整可見的阿Q桶麵？",
+        "answer": "<think>計算所有杯數：左列3杯（紅色條帶），中列3杯（藍色條帶），右列3杯（橙色條帶）。總共3列×3層=9杯阿Q桶麵。</think><answer>9</answer>"
+    },
+    {
+        "image": "29.jpg",
+        "question": "請問有幾杯標示「川辣牛肉風味」的泡麵？",
+        "answer": "<think>識別「川辣牛肉風味」文字：中間偏左側有兩杯標示「川辣牛肉風味」。共兩杯泡麵。</think><answer>2</answer>"
+    },
+    {
+        "image": "29.jpg",
+        "question": "請問最前排上層和下層總共有幾杯泡麵？",
+        "answer": "<think>計算總杯數：最前排上層有4杯可見，下層也有4杯排列。總共2層×4杯=8杯泡麵。</think><answer>8</answer>"
+    },
+        {
+        "image": "30.jpg",
+        "question": "請問前排有幾個罐子的蓋子是紅色的？",
+        "answer": "<think>掃描紅色蓋子：最左側有1個大罐紅蓋（豆瓣醬），左側還有1個小罐紅蓋，最右側有1個大罐紅蓋（龍眼）。前排至少可見3個明顯的紅色蓋子。</think><answer>3</answer>"
+    },
+    {
+        "image": "30.jpg",
+        "question": "前排有幾個罐子的標籤是白色為主的？",
+        "answer": "<think>識別白色標籤：前排中間有2個罐子帶有白色蓋子和標籤（香椿拌醬）。其他罐子主要是粉紅色、黃色的標籤。前排有2個白色為主的標籤。</think><answer>2</answer>"
+    },
+    {
+        "image": "30.jpg",
+        "question": "請問前排有幾個標籤是「香椿拌醬」的罐子？",
+        "answer": "<think>識別「香椿拌醬」文字：前排中間有2個罐子帶有標籤「香椿拌醬」。總共可見2個罐子。</think><answer>2</answer>"
+    },
+    {
+        "image": "31.jpg",
+        "question": "請問有幾瓶標籤上寫著「鳳梨酢」或「Pineapple Vinegar」？",
+        "answer": "<think>識別鳳梨酢文字：左側有3瓶黃色標籤，清楚寫著「鳳梨酢 Pineapple Vinegar」和「KONG YEN」品牌。總共3瓶鳳梨酢。</think><answer>3</answer>"
+    },
+    {
+        "image": "31.jpg",
+        "question": "圖中有幾瓶標籤上寫著「陳年酢」？",
+        "answer": "<think>掃描陳年酢文字：中間有2瓶綠色標籤，上面寫著「陳年酢」和工研品牌標誌。總共2瓶陳年酢。</think><answer>2</answer>"
+    },
+    {
+        "image": "31.jpg",
+        "question": "請問前排有幾瓶的瓶蓋是黃色的？",
+        "answer": "<think>掃描黃色瓶蓋：前排所有可見的酢瓶都有黃色瓶蓋，包括3瓶鳳梨酢、2瓶陳年酢。前排總共5瓶黃色瓶蓋。</think><answer>5</answer>"
+    },
+    {
+        "image": "32.jpg",
+        "question": "請問有幾瓶標籤上寫著「果酢日和」或「FRUIT VINEGAR」？",
+        "answer": "<think>識別果酢日和文字：中間和右側有3瓶白色標籤，清楚寫著「果酢日和 FRUIT VINEGAR」，包括梅子果酢和百香果果酢。總共3瓶果酢日和。</think><answer>3</answer>"
+    },
+    {
+        "image": "32.jpg",
+        "question": "圖中有幾瓶的標籤是綠色的？",
+        "answer": "<think>識別綠色標籤：左側有2瓶綠色標籤的糯米酢。總共2瓶綠色標籤。</think><answer>2</answer>"
+    },
+    {
+        "image": "32.jpg",
+        "question": "請問有幾瓶的瓶蓋是黑色的？",
+        "answer": "<think>掃描黑色瓶蓋：中間區域有3瓶果酢日和系列，都配有明顯的黑色瓶蓋。總共3瓶黑色瓶蓋。</think><answer>3</answer>"
+    },
+    {
+        "image": "33.jpg",
+        "question": "請問有幾瓶標籤上寫著「工研烏酢」？",
+        "answer": "<think>識別「工研烏酢」文字：中間2瓶紅色標籤有黃色圓形標誌寫著「工研烏酢」。總共2瓶標示工研烏酢。</think><answer>2</answer>"
+    },
+    {
+        "image": "33.jpg",
+        "question": "圖中有幾瓶的標籤是紅色的？",
+        "answer": "<think>掃描紅色標籤：中間有2瓶明顯的紅色標籤，上面有黃色圓形「工研烏酢」標誌。總共2瓶紅色標籤。</think><answer>2</answer>"
+    },
+    {
+        "image": "33.jpg",
+        "question": "請問有幾瓶的標籤是白色帶金色邊框的？",
+        "answer": "<think>識別白色金邊標籤：左側有2瓶白色標籤帶金色邊框，寫著「糯米醋」字樣。總共2瓶白色金邊標籤。</think><answer>2</answer>"
+    },
+    {
+        "image": "34.jpg",
+        "question": "請問有幾瓶標籤上寫著「正蔭油」？",
+        "answer": "<think>識別「正蔭油」文字：掃描所有瓶子標籤，中間區域有2瓶標籤上清楚寫著「正蔭油」字樣，分別搭配橙色和紫色瓶蓋。總共2瓶正蔭油。</think><answer>2</answer>"
+    },
+    {
+        "image": "34.jpg",
+        "question": "請問有幾瓶標籤上寫著「瑞春伯」？",
+        "answer": "<think>識別「瑞春伯」文字：掃描所有瓶子標籤，左側區域有2瓶標籤上清楚寫著「瑞春伯」字樣。總共2瓶瑞春伯。</think><answer>2</answer>"
+    },
+    {
+        "image": "34.jpg",
+        "question": "圖中有幾瓶的瓶蓋是橙色的？",
+        "answer": "<think>識別橙色瓶蓋：左側第3瓶（從左數）有明顯的橙色瓶蓋。總共1瓶橙色瓶蓋。</think><answer>1</answer>"
+    },
+    {
+        "image": "34.jpg",
+        "question": "請問有幾瓶的瓶蓋是紫色或深紫色的？",
+        "answer": "<think>掃描紫色瓶蓋：中間偏右有1瓶明顯的深紫色瓶蓋，標籤上寫著「正蔭油」。總共1瓶紫色瓶蓋。</think><answer>1</answer>"
+    },
+    {
+        "image": "35.jpg",
+        "question": "請問有幾罐標籤上寫著「綠巨人」？",
+        "answer": "<think>識別「綠巨人」文字：所有可見的罐頭標籤上都清楚寫著「綠巨人 Green Giant」品牌名稱。前排左側堆疊2罐，前排中間和右側各1罐。總共4罐綠巨人玉米罐。</think><answer>4</answer>"
+    },
+    {
+        "image": "35.jpg",
+        "question": "圖中有幾罐是堆疊放置的？",
+        "answer": "<think>識別堆疊：左側明顯有2罐上下堆疊。其他罐頭是平放排列。總共2罐處於堆疊狀態。</think><answer>2</answer>"
+    },
+    {
+        "image": "35.jpg",
+        "question": "請問總共有幾個罐頭？",
+        "answer": "<think>識別罐頭數量：前排左側堆疊2罐，前排中間和右側各1罐。總共4罐綠巨人玉米罐。</think><answer>4</answer>"
     }
+
 ]
