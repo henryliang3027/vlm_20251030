@@ -36,15 +36,15 @@ SYSTEM_PROMPT = (
 
 # Load model
 base_model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
-adapter_path = "./Qwen2.5-VL-3B-Custom-size-768-improved-reward/checkpoint-2400"
+adapter_path = "./checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs/checkpoint-92540"
 
 # specify image path
 images_dir = './training_data/images'
 
-image_path = os.path.join(images_dir, '19.jpg')
+image_path = os.path.join(images_dir, '12.jpg')
 img = Image.open(image_path).convert("RGB")
 image = resize_image(img, max_size=MAX_IMAGE_SIZE)
-question = "請問有幾個來一客泡麵杯？"
+question = "請問有幾瓶橄欖油是紅色標籤的?"
 
 
 # Create conversation

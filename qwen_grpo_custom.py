@@ -189,7 +189,52 @@ def format_reward(completions, **kwargs):
         # print(f"is match: {bool(match)}")
         rewards.append(1.0 if match else 0.0)
 
+    print(f"format_reward: {rewards}, {len(rewards)}")
+
     return rewards
+
+
+def reasoning_reward(completions: list[list[dict[str, str]]], problem: list[str], solution: list[str], **kwargs) -> list[Optional[float]]:
+    rewards = []
+
+    for idx, (completion, problem, sol) in enumerate(zip(completions, problem, solution)):
+
+        # print(f"completion: {completion}")
+        # print(f"problem: {problem}")
+        # print(f"sol: {sol}")
+
+        # Extract text from conversation format
+        if isinstance(completion, list) and len(completion) > 0:
+            # Get the last message (assistant's response)
+            content = completion[-1].get("content", "") if isinstance(completion[-1], dict) else str(completion[-1])
+        else:
+            content = str(completion)
+
+
+        pattern = r"<think>\s*(.*?)\s*</think>"
+        generated_think_match = re.search(pattern, content, re.DOTALL)
+
+        if generated_think_match:
+            generated_think_text = generated_think_match.group(1).strip()
+        else:
+            # If no tags found, use the entire content
+            generated_think_text = content.strip()
+
+        print(f"generated_think_text{idx}: {generated_think_text}")
+
+        score = 0
+        if len(generated_think_text) > 15 and len(generated_think_text) < 160:
+            score += 0.4
+            keywords = ["總共", "可見", "堆疊", "掃描", "計算", "識別", "包裝", "色", "有", "層"]
+            if any(k in generated_think_text for k in keywords):
+                score += 0.6
+
+        score = min(score, 1.0)
+        rewards.append(score)
+
+    print(f"reasoning_reward: {rewards}, {len(rewards)}")
+    return rewards
+    
 
 
 # Solution Accuracy: Verifies whether the solution to the problem is correct, comparing it to the solution column in the dataset.
@@ -269,22 +314,22 @@ def accuracy_reward(completions: list[list[dict[str, str]]], solution: list[str]
 
         rewards.append(reward)
 
-    print(f"rewards length: {len(rewards)}")
+    print(f"accuracy_reward : {rewards}, {len(rewards)}")
     return rewards
 
 
 # Configure training arguments using GRPOConfig
 training_args = GRPOConfig(
-    output_dir="Qwen2.5-VL-3B-Custom-size-768-improved-reward-500epochs",
+    output_dir="checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs",
     learning_rate=1e-5,
     remove_unused_columns=False, # to access the solution column in accuracy_reward
-    num_train_epochs=500,
+    num_train_epochs=10000,
     bf16=True,
 
     # Parameters that control the data preprocessing
-    per_device_train_batch_size=2,
+    per_device_train_batch_size=4,
     max_completion_length=1024, # default: 256
-    num_generations=2, # default: 8
+    num_generations=4, # default: 8
     max_prompt_length=4096,  # Increased to accommodate image tokens
 
     # Parameters related to reporting and saving
@@ -306,7 +351,7 @@ print("="*50)
 trainer = GRPOTrainer(
     model=model,
     processing_class=processor,
-    reward_funcs=[format_reward, accuracy_reward],
+    reward_funcs=[format_reward, accuracy_reward, reasoning_reward],
     args=training_args,
     train_dataset=train_dataset,
 )
