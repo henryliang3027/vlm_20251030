@@ -36,15 +36,17 @@ SYSTEM_PROMPT = (
 
 # Load model
 base_model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
-adapter_path = "./checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs/checkpoint-92540"
+# adapter_path = "./checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs/checkpoint-92540"
+adapter_path = "./checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs/checkpoint-50240"
+# adapter_path = "./checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs/checkpoint-36170"
 
 # specify image path
 images_dir = './training_data/images'
 
-image_path = os.path.join(images_dir, '12.jpg')
+image_path = os.path.join(images_dir, '67.jpg')
 img = Image.open(image_path).convert("RGB")
 image = resize_image(img, max_size=MAX_IMAGE_SIZE)
-question = "請問有幾瓶橄欖油是紅色標籤的?"
+question = "請問前排有幾瓶的瓶蓋是白色的?"
 
 
 # Create conversation
