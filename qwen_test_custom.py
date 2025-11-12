@@ -20,8 +20,8 @@ def resize_image(img_pil, max_size=512):
         return img_pil.resize((new_width, new_height), Image.LANCZOS)
     return img_pil
 
-
-MAX_IMAGE_SIZE = 768  # Set maximum image size to fit within token limits
+# Set maximum image size to fit within token limits
+MAX_IMAGE_SIZE = 768  
 
 # System prompt
 SYSTEM_PROMPT = (
