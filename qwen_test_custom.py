@@ -37,7 +37,7 @@ SYSTEM_PROMPT = (
 # Load model
 base_model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
 # adapter_path = "./checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs/checkpoint-92540"
-adapter_path = "./checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs/checkpoint-50240"
+adapter_path = "./checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs1/checkpoint-50250"
 # adapter_path = "./checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs/checkpoint-36170"
 
 # specify image path
@@ -101,6 +101,11 @@ def get_base_model_response():
     # Decode base model response
     generated_ids = output_ids[:, inputs.input_ids.shape[1]:]
     response = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
+
+    print(f"inputs shape: {inputs.input_ids.shape}")
+    print(f"inputs ids shape: {inputs.input_ids.shape}")
+    print(f"output_ids shape: {output_ids.shape}")
+    print(f"generated_ids shape: {generated_ids.shape}")
 
     print("\n" + "="*80)
     print("BASE MODEL RESPONSE:")

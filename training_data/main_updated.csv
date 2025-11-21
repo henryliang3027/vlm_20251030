@@ -1,0 +1,175 @@
+image,question,answer
+1.jpg,n,"<think>由左至右分別為，左邊ALISA橄欖罐頭堆疊4罐，中間紅色醃漬罐2罐，右邊黃色罐2罐</think><answer>ALISA橄欖罐頭(白紫):4,醃漬罐頭(紅):2,醃漬罐頭(黃):2</answer>"
+2.jpg,n,"<think>由左至右分別為，左邊有2包紫色包裝的Fresh Express Kit Caesar凱薩沙拉套裝，右邊有1包粉紅標籤的Spring Mix春季綜合沙拉。</think><answer>Fresh Express Kit Caesar(紫):2,Fresh Express Spring Mix(粉紅):1</answer>"
+3.jpg,n,<think>全部都是McVitie's消化餅乾，共5包紅色包裝。</think><answer>McVitie's Digestive(紅):5</answer>
+4.jpg,n,"<think>由左至右分別為左邊1包黃色Sunflower葵花籽麵包，右邊1包紅色Whole Rye全麥黑麥麵包。</think><answer>Mestemacher Sunflower Seed Bread(黃):1,Mestemacher Whole Rye Bread(紅):1</answer>"
+5.jpg,n,"<think>由左至右分別為左邊3包紅橙色Digestive餅乾，右邊3包藍色Rich Tea餅乾。</think><answer>Burton's Digestive(紅橙):3,Burton's Rich Tea(藍):3</answer>"
+6.jpg,n,"<think>上層由左至右分別為，左邊2包藍色Poppables，中間4包紅色口味，右邊2包橙色口味。下層由左至右分別為，左邊1包紅色Poppables，中間2包綠色Poppables和2包檸檬口味，右邊3包黃色蜂蜜烤肉口味。</think><answer>Lay's Poppables(藍):2,Lay's(紅):4,Lay's(橙):2,Lay's Poppables(紅):1,Lay's Poppables(綠):2,Lay's Limón(綠):2,Lay's Honey Barbecue(黃):3</answer>"
+7.jpg,n,"<think>上層由左至右分別為，左邊2包黃色Quadratini，中間2包綠色抹茶口味和3包紅色榛果口味，右邊2包深色口味。下層由左至右分別為，左邊3包藍色香草口味，中間2包紫色藍莓口味和2包覆盆子口味，右邊1包深色巧克力口味。</think><answer>Loacker Quadratini(黃):2,Loacker Quadratini Matcha(綠):2,Loacker Quadratini Hazelnut(紅):3,Loacker Quadratini(深):2,Loacker Quadratini Vanilla(藍):3,Loacker Quadratini Blueberry(紫):2,Loacker Quadratini Raspberry(粉):2,Loacker Quadratini Dark Chocolate(深棕):1</answer>"
+8.jpg,n,"<think>由左至右分別為，左邊1盒綠色哈密瓜麻糬，中間1盒黃色香蕉麻糬和1盒綠茶麻糬，右邊1盒粉色紅豆麻糬。</think><answer>哈密瓜麻糬(綠):1,香蕉麻糬(黃):1,抹茶麻糬(深綠):1,紅豆麻糬(粉):1</answer>"
+9.jpg,n,"<think>左邊1瓶綠色茉莉鮮奶綠茶，中間2瓶奶茶本味，右邊1瓶老北京御品仙楂洛神。</think><answer>茉莉鮮奶綠茶(綠):1,奶茶本味(白):2,老北京仙洛神(黃):1</answer>"
+10.jpg,n,"<think>由左至右分別為，左邊1盒咖啡奶油口味，1盒牛奶榛果口味，中間2盒深紅色榛果口味，2盒藍色牛奶奶油口味，右邊2盒粉色草莓優格口味。</think><answer>Choceur Coffee & Cream(棕):1,Choceur Milk Hazelnut(橙):1,Choceur Dark Hazelnut(紅):2,Choceur Milk Crème(藍):2,Choceur Strawberry Yogurt(粉):2</answer>"
+11.jpg,n,<think>貨架上都是La Victoria莎莎醬，共4瓶都是紅色包裝。</think><answer>La Victoria Salsa Thick'n Chunky(紅):4</answer>
+12.jpg,n,"<think>由左至右分別為，左邊3瓶Bertolli橄欖油，右邊2瓶Kroger橄欖油。</think><answer>Bertolli Extra Virgin Olive Oil(綠):3,Kroger Extra Virgin Olive Oil(綠):2</answer>"
+13.jpg,n,"<think>由左至右分別為，左邊4杯Indomie泡麵，右邊2杯Maggi Mi Goreng泡麵。</think><answer>Indomie Instant Cup Noodles(紅):4,Maggi Fusion Mi Goreng(黑):2</answer>"
+14.jpg,n,"<think>由左至右分別為，左邊1盒粉色Theraflu感冒藥，1盒黃色Theraflu，中間1盒藍色DayTime感冒藥，右邊1盒綠色Theraflu。</think><answer>Theraflu Flu & Sore Throat(粉):1,Theraflu Severe Cold & Cough(黃):1,Kroger DayTime Flu(藍):1,Theraflu Severe Cold & Cough(綠):1</answer>"
+15.jpg,n,<think>貨架上3罐Reese Hearts of Palm棕櫚心罐頭。</think><answer>Reese Hearts of Palm(黃藍):3</answer>
+16.jpg,n,<think>貨架上3罐Signature Select醃漬甜菜罐頭。</think><answer>Signature Select Pickled Sliced Beets(紅綠):3</answer>
+17.jpg,n,<think>由左至右分別為，中間3盒雞蛋，右邊1盒雞蛋。</think><answer>雞蛋(白盒):4</answer>
+18.jpg,n,"<think>由左至右分別為，左邊2個紫色藍莓乳酪三明治，右邊2個雙倍起司火腿蛋三明治。</think><answer>原賞藍莓乳酪三明治(紫):2,原賞雙倍起司火腿蛋三明治(橙):2</answer>"
+19.jpg,n,"<think>上層10個來一客泡麵。下層8個阿Q桶麵。</think><answer>來一客(白):10,阿Q桶麵(橙):8</answer>"
+20.jpg,n,"<think>上層5包黃色義美小泡芙牛奶口味，下層11包粉色義美小泡芙草莓口味。</think><answer>義美小泡芙牛奶(黃):5,義美小泡芙草莓(粉):11</answer>"
+21.jpg,n,"<think>由左至右分別為，左邊1罐苦茶腐乳和1罐南乳，中間1罐花椒辣腐乳和1罐非基因改造麻油白腐乳，右邊1罐豆乳醬和1罐真味豆腐乳。</think><answer>苦茶油腐乳(紫):2,南乳(紫紅):1,花椒辣腐乳(黑):1,非基因改造麻油白腐乳(藍):1,豆乳醬(紅橙):1,真味豆腐乳(粉):1</answer>"
+22.jpg,n,"<think>由左至右分別為，左邊1盒檸檬薄餅，1盒紅麴薄餅，中間1盒鮮乳薄餅，1盒Crunchoco杏仁巧克力酥片，右邊1盒Cracker蘇打夾心餅。</think><answer>義美檸檬薄餅(綠):1,義美紅麴薄餅(粉):1,義美鮮乳薄餅(藍):1,義美Crunchoco杏仁巧克力酥片(棕):1,義美Cracker蘇打夾心餅(綠):1</answer>"
+23.jpg,n,"<think>由左至右分別為，左邊1瓶綠色飲料，1瓶原萃茶，中間1瓶紅色瓶蓋飲料，1瓶冷萃茶，右邊2瓶黑豆漿。</think><answer>飲料(綠):1,原萃茶(橙):1,飲料(紅):1,冷萃茶(綠):1,黑豆漿(黃):2</answer>"
+24.jpg,n,"<think>由左至右分別為，左邊4瓶健酪乳酸飲料，中間2瓶健酪YoGo Fresh，右邊1瓶奧利多水。</think><answer>健酪乳酸飲料(白藍):4,健酪YoGo Fresh(黃綠):2,奧利多水(綠):1</answer>"
+25.jpg,n,"<think>由左至右分別為，左邊1瓶葡萄汁，中間4瓶高纖燕麥穀奶。</think><answer>園之味葡萄汁(紫):1,高纖燕麥穀奶(橙):4</answer>"
+26.jpg,n,"<think>由左至右分別為，左邊1瓶特紅茶，1瓶特奶茶，中間1瓶芭樂汁，1瓶波蜜果菜汁，1瓶葡萄汁，右邊1瓶蔓越莓汁。</think><answer>御茶園特上紅茶(紅):1,御茶園特上奶茶(米):1,波蜜芭樂汁(綠):1,波蜜果菜汁(橙):1,波蜜葡萄汁(紫):1,優鮮沛蔓越莓汁(藍):1</answer>"
+27.jpg,n,"<think>由左至右分別為，左邊2包Mee Baa..gus雞肉口味泡麵，右邊1盒6入裝Mee Baa..gus泡麵。</think><answer>Mee Baa..gus Soto Ayam(黃綠):2,Mee Baa..gus Mi Segar(白):1</answer>"
+28.jpg,n,"<think>由左至右分別為，第一排：3個紅色阿Q桶麵，第二排：3個藍色阿Q桶麵，第三排：3個橙色阿Q桶麵。</think><answer>阿Q桶麵(紅橙):3,阿Q桶麵(藍橙):3,阿Q桶麵(橙):3</answer>"
+29.jpg,n,<think>全部都是來一客泡麵，共9個白色包裝。</think><answer>來一客(白):9</answer>
+30.jpg,n,"<think>由左至右分別為，左邊1罐豆瓣醬，1罐豆豉，1罐麻油醬，中間2罐香椿拌醬，右邊2瓶龍眼蜜。</think><answer>豆瓣醬(紅):1,豆豉(粉):1,麻油醬(綠):1,香椿拌醬(白):2,龍眼蜜(棕):2</answer>"
+31.jpg,n,"<think>由左至右分別為，左邊3瓶黃色工研鳳梨醋，中間2瓶綠色陳年醋，右邊部分看到果醋。</think><answer>工研鳳梨醋(黃):3,工研陳年醋(綠):2</answer>"
+32.jpg,n,"<think>由左至右分別為，左邊2瓶綠色陳年醋，中間1瓶梅子果醋和2瓶百香果果醋，右邊1瓶康普。</think><answer>工研陳年醋(綠):2,果醋日和梅子果醋(白):1,果醋日和百香果果醋(白):2,康普(橙):1</answer>"
+33.jpg,n,"<think>由左至右分別為，左邊2瓶糯米醋，中間2瓶工研烏醋，右邊2瓶工研醋。</think><answer>糯米醋(白):2,工研烏醋(紅):2,工研醋(綠):2</answer>"
+34.jpg,n,"<think>由左至右分別為，左邊2瓶瑞春伯醬油，中間1瓶橙色正蔭油醬油和1瓶紫色正蔭油醬油，右邊1瓶蘭級清油，1瓶菊級清油和1瓶胡麻油。</think><answer>瑞春伯(黃):2,正蔭油(橙):1,正蔭油(紫):1,蘭級清油(粉):1,菊級清油(黃):1,胡麻油(銀):1</answer>"
+35.jpg,n,<think>全部都是綠巨人玉米粒，共4罐綠巨人玉米粒。</think><answer>綠巨人珍珠玉米粒(綠紅):4</answer>
+36.jpg,n,<think>全部都是青葉麵筋罐頭，部分罐頭的文字被遮擋，共9罐青葉麵筋罐頭。</think><answer>青葉麵筋(綠):9</answer>
+37.jpg,n,"<think>由左至右分別為，左側有1罐白色的有機細緻黑芝麻粉，2罐淺綠色罐身的桂格高鈣脫脂奶粉，呈現上下堆疊，中間有2罐粉紅色罐身的桂格膠原蛋白高鐵高鈣奶粉，呈現上下堆疊，右側有2罐深綠色罐身的桂格葡萄糖胺高鈣奶粉，呈現上下堆疊，右側有1罐銀色的克寧銀養高鈣Omega3奶粉。</think><answer>有機細緻黑芝麻粉(白色):1,桂格高鈣脫脂奶粉(淺綠色):2,桂格膠原蛋白高鐵高鈣奶粉(粉色):2,桂格葡萄糖胺高鈣奶粉(深綠色):2,克寧銀養高鈣Omega3奶粉(銀色):1</answer>"
+38.jpg,n,"<think>由左至右分別為，左邊4包五月花抽取式衛生紙，中間4包深藍色厚棒衛生紙，右邊3包橙色五月花紙巾。</think><answer>五月花抽取式衛生紙(黃):4,厚棒衛生紙(深藍):4,五月花紙巾(橙):3</answer>"
+39.jpg,n,"<think>由左至右分別為，左邊2包蒲公英衛生紙，右邊3包得意抽取式衛生紙。</think><answer>蒲公英衛生紙(綠白):2,得意抽取式衛生紙(藍黃):3</answer>"
+40.jpg,n,"<think>由左至右分別為，3瓶Mr.Brown Pure Brew咖啡，3瓶韋恩咖啡。</think><answer>Mr.Brown Pure Brew(白):3,韋恩咖啡(棕):3</answer>"
+41.jpg,n,"<think>由左至右共有8個直排。第1排：2罐是橘色包裝。
+第2排：3罐皆為紅色包裝。
+第3排：3罐皆為綠色包裝。
+第4排：3罐皆為白色包裝。
+第5排：3罐皆為棕色包裝。
+第6排：3罐皆為藍色包裝。
+第7排：2罐皆為紫紅色包裝。
+第8排：2罐皆為黑色包裝。
+</think>
+<answer>伯朗咖啡曼特寧(橘):2,伯朗咖啡卡布奇諾(紅):3,伯朗咖啡(綠):3,伯朗咖啡(白):3,伯朗咖啡原味(棕):3,伯朗咖啡藍山風味(藍):3,伯朗咖啡EX雙倍濃烈(紫紅):2,伯朗咖啡(黑):3</answer>"
+42.jpg,n,"<think>由左至右分別為，左邊2瓶野菜一日飲料，1瓶可果美番茄汁，中間2瓶冷山茶王，右邊2瓶寶礦力水得。</think><answer>野菜一日(紅綠):2,可果美番茄汁(淺黃):1,冷山茶王(藍):2,寶礦力水得(藍):2</answer>"
+43.jpg,n,"<think>由左至右分別為，左邊2瓶寶礦力水得，2罐橙色Tree Top，2罐綠色汽水，右邊1瓶椰子水和2瓶Tree Top蘋果汁。</think><answer>寶礦力水得(藍):2,Tree Top Sparkling Orange(橙):2,汽水(綠):2,椰子水(藍):1,Tree Top蘋果汁(棕):2</answer>"
+44.jpg,n,"<think>由左至右分別為，左邊2罐綠色汽水，1瓶椰子水，中間2瓶Tree Top蘋果汁，右邊1瓶橙色Georgia雲朵拿鐵，1瓶棕色Georgia雲朵拿鐵和1瓶飲料。</think><answer>汽水(綠):2,椰子水(藍):1,Tree Top蘋果汁(棕):2,Georgia雲朵拿鐵(橙):1,Georgia雲朵拿鐵(棕):1,飲料(白):1</answer>"
+45.jpg,n,"<think>由左至右分別為，左邊1瓶朝露紅茶，中間3瓶茉莉蜜茶，右邊3瓶冷泡茶。</think><answer>朝露紅茶(紅):1,茉莉蜜茶(黃):3,冷泡茶(綠):3</answer>"
+46.jpg,n,"<think>由左至右分別為，左邊1瓶奧利多水，2瓶伊藤園茶，中間1瓶蘋果紅茶，1瓶冷泡茶冰釀烏龍，1瓶朝露紅茶，右邊1瓶茉莉蜜茶。</think><answer>奧利多水(綠):1,伊藤園茶(綠):2,蘋果紅茶(粉):1,冷泡茶冰釀烏龍(黃):1,朝露紅茶(紅):1,茉莉蜜茶(黃):1</answer>"
+47.jpg,n,"<think>由左至右分別為，左邊3瓶統一木瓜牛乳，右邊4瓶飲冰室茶集紅奶茶。</think><answer>統一木瓜牛乳(橙):3,飲冰室茶集紅奶茶(粉):4</answer>"
+48.jpg,n,"<think>由左至右分別為，左邊2瓶寶礦力水得，2瓶朝露綠茶，右邊2瓶御茶園綠茶和2瓶冷泡茶冷韻清茶。</think><answer>寶礦力水得(藍):2,朝露綠茶(綠):2,御茶園(綠):2,冷泡茶冷韻清茶(藍):2</answer>"
+49.jpg,n,"<think>由左至右分別為，左邊2罐牛奶，右邊2罐荔枝風味氣泡飲。</think><answer>牛奶(藍白):2,荔枝風味氣泡飲(粉):2</answer>"
+50.jpg,n,"<think>由左至右分別為，左邊1罐偉恩咖啡，1罐Mountain Dew，1罐可口可樂，右邊1罐健酪乳酸飲料和1罐荔枝飲料。</think><answer>偉恩咖啡(黑):1,Mountain Dew(綠):1,Coca-Cola(紅):1,健酪乳酸飲料(白):1,荔枝(粉):1</answer>"
+51.jpg,n,"<think>由左至右分別為，2杯來一客泡麵，2杯黑色Buldak辣雞麵，2杯粉色Buldak辣雞麵。</think><answer>來一客(紅):2,Buldak(黑):2,Buldak(粉):2</answer>"
+52.jpg,n,"<think>由左至右分別為，1杯黑色Buldak辣雞麵，2杯粉色Buldak辣雞麵，2杯黃色隨緣椎茸味麵。</think><answer>Buldak(黑):1,Buldak(粉):2,隨緣椎茸味麵(黃):2</answer>"
+53.jpg,n,"<think>由左至右分別為，2碗小時光麵，2碗味味A排骨雞湯麵，2碗味味A冬菜鴨肉湯粉絲。</think><answer>小時光(黃):2,味味A排骨雞湯麵(紅):2,味味A冬菜鴨肉湯粉絲(紅):2</answer>"
+54.jpg,n,<think>全部都是統一麵蔥燒牛肉，共4碗統一麵蔥燒牛肉。</think><answer>統一麵蔥燒牛肉(黃):4</answer>
+55.jpg,n,<think>全部都是台酒花雕雞麵，共2碗台酒花雕雞麵。</think><answer>台酒花雕雞麵(棕):2</answer>
+56.jpg,n,"<think>由左至右分別為，1碗麻油雞麵，1碗台酒花雕酸菜牛肉麵。</think><answer>麻油雞麵(紅):1,台酒花雕酸菜牛肉麵(黑):1</answer>"
+57.jpg,n,<think>全部都是台酒花雕酸菜牛肉麵，共2碗台酒花雕酸菜牛肉麵。</think><answer>台酒花雕酸菜牛肉麵(黃黑):2</answer>
+58.jpg,n,"<think>由左至右分別為，1碗一度贊爌肉麵，1碗一度贊濃番茄牛肉麵。</think><answer>一度贊爌肉麵(橙):1,一度贊濃番茄牛肉麵(紅):1</answer>"
+59.jpg,n,"<think>由左至右分別為，1碗一度贊紅燒牛肉麵，1碗一度贊爌肉麵。</think><answer>一度贊紅燒牛肉麵(紅):1,一度贊爌肉麵(橙):1</answer>"
+60.jpg,n,"<think>由左至右分別為，2碗一度贊紅燒牛肉麵，1碗一度贊爌肉麵。</think><answer>一度贊紅燒牛肉麵(紅):2,一度贊爌肉麵(橙):1</answer>"
+61.jpg,n,"<think>由左至右分別為，1瓶黑色世界一咖啡，1瓶黃色世界一咖啡，1瓶UCC BLACK咖啡，1瓶Georgia Latte，1瓶Georgia Black，1瓶Purple飲料。</think><answer>世界一咖啡(黑):1,世界一咖啡(黃):1,UCC BLACK(黑):1,Georgia Latte(白):1,Georgia Black(黑):1,Purple飲料(紫):1</answer>"
+62.jpg,n,"<think>由左至右分別為，左邊1瓶原萃冷萃茶，1瓶DyDo拿鐵咖啡，1瓶DyDo黑咖啡，中間1罐世界一黑咖啡，1罐世界一拿鐵咖啡，右邊1罐UCC無糖黑咖啡。</think><answer>原萃冷萃茶(橘):1, DyDo拿鐵咖啡(淺棕):1, DyDo黑咖啡(黑金):1, 世界一黑咖啡(黑):1, 世界一拿鐵咖啡(金):1, UCC無糖黑咖啡(黑):1</answer>"
+63.jpg,n,"<think>由左至右分別為，1瓶韋恩咖啡，1瓶ROASTA咖啡，2罐Red Bull，1罐白色魔爪能量飲料，1罐黑色魔爪能量飲料。</think><answer>韋恩咖啡(黑):1,ROASTA(黑黃):1,Red Bull(藍):2,魔爪能量飲料(白):1,魔爪能量飲料(黑):1</answer>"
+64.jpg,n,"<think>由左至右分別為，1瓶午後紅茶，1瓶無糖午後紅茶，1瓶伊藤園Tea，1瓶可爾必思。</think><answer>午後紅茶(棕):1,無糖午後紅茶(棕):1,伊藤園Tea(黃):1,可爾必思(白):1</answer>"
+65.jpg,n,"<think>由左至右分別為，1瓶御茶園，1瓶波蜜BCE，1瓶泡沫綠茶，1瓶日月紅玉紅茶，2瓶古道綠茶。</think><answer>御茶園(黃):1,波蜜BCE(橙):1,泡沫綠茶(綠):1,日月紅玉紅茶(紅):1,古道綠茶(綠):2</answer>"
+66.jpg,n,"<think>由左至右分別為，2瓶舒跑，2瓶FIN礦泉水，1瓶黑松汽水。</think><answer>舒跑(綠):2,FIN(藍):2,黑松汽水(黑):1</answer>"
+67.jpg,n,"<think>由左至右分別為，2瓶十六茶，1瓶分解茶四季春，1瓶分解茶麥茶，1瓶原萃東方美人茶，2瓶每朝健康熟藏紅茶。</think><answer>十六茶(綠):2,分解茶四季春(紫):1,分解茶麥茶(淺藍):1,原萃東方美人茶(藍):1,每朝健康熟藏紅茶(紅):2</answer>"
+68.jpg,n,"<think>由左至右分別為，1瓶巧克力奶茶，1瓶檸檬紅茶，1瓶梅仔風味綠茶，2瓶十六茶，1瓶分解茶四季春，1瓶分解茶麥茶。</think><answer>巧克力奶茶(棕):1,檸檬紅茶(黃):1,梅仔風味綠茶(綠):1,十六茶(綠):2,分解茶四季春(紫):1,分解茶麥茶(淺藍):1</answer>"
+69.jpg,n,"<think>由左至右分別為，1瓶麥香阿薩姆奶茶，2瓶茶裏王半熟金萱，1瓶綠茶，1瓶烏龍茶。</think><answer>麥香阿薩姆奶茶(白):1,茶裏王半熟金萱(橙):2,綠茶(綠):1,烏龍茶(粉):1</answer>"
+70.jpg,n,"<think>由左至右分別為，1瓶烏龍茶，2瓶麥萃冰釀麥萃，1瓶麥萃日式麥茶。</think><answer>烏龍茶(粉):1,麥萃冰釀麥萃(橙):1,麥萃日式麥茶(藍):2</answer>"
+1.jpg,圖中有幾個玻璃罐？,<think>圖片中央和右側有一些玻璃罐，包括紅色罐和黃色罐。可以清楚看到2個紅色罐和2個黃色罐，總共4個罐子。</think><answer>4</answer>
+1.jpg,圖中有幾個黃色玻璃罐？,<think>右側共有兩個黃色玻璃罐，一個紅標籤、一個綠標籤。</think><answer>2</answer>
+2.jpg,請問圖中共有幾包沙拉？,<think>可以看到三包沙拉：兩包紫色的Caesar Kit和一包粉紅色的Spring Mix。</think><answer>3</answer>
+2.jpg,圖中有幾包Caesar Kit沙拉？,<think>辨識出兩包紫色包裝的Caesar Kit沙拉，位於左側與中間。</think><answer>2</answer>
+2.jpg,圖中有幾包Spring Mix沙拉？,<think>右邊只有一包粉紅色包裝的Spring Mix沙拉。</think><answer>1</answer>
+3.jpg,請問圖中有多少盒McVitie's餅乾？,<think>從左到右掃描：左側2盒直立放置，右側3盒直立放置。總共可見5盒McVitie's消化餅。</think><answer>5</answer>
+3.jpg,圖中有幾盒是橫放的？,<think>觀察盒子擺放方向：全部的盒子都是直立的。</think><answer>0</answer>
+3.jpg,圖中有幾盒紅色的餅乾包裝？,<think>全部的盒子都是紅色的。總共5盒紅色包裝的McVitie's消化餅。</think><answer>5</answer>
+4.jpg,請問圖中有多少包Mestemacher麵包？,<think>掃描貨架：左側有1包黃色的Sunflower Seed Bread，右側有1包紅色的Whole Rye Bread。總共可見2包Mestemacher麵包。</think><answer>2</answer>
+4.jpg,圖中有幾包Whole Rye Bread？,<think>尋找Whole Rye Bread：貨架右側有1包紅色標示'Whole Rye Bread'的麵包。沒有其他Whole Rye Bread包裝可見。</think><answer>1</answer>
+5.jpg,請問圖中有多少包Burton's餅乾？,<think>從左到右掃描貨架：左側有3包紅/橙色的Digestive，右側有3包藍色的Rich Tea。總共可見6包Burton's餅乾。</think><answer>6</answer>
+5.jpg,圖中有幾包Rich Tea？,<think>識別藍色Rich Tea包裝：貨架右側顯示3包藍色標示Rich Tea的餅乾。總共3包Rich Tea餅乾。</think><answer>3</answer>
+5.jpg,圖中有幾包Digestive餅乾？,<think>計算紅/橙色Digestive包裝：左側有3包完整的Digestive。總共3包Digestive餅乾。</think><answer>3</answer>
+6.jpg,請問圖中有多少包藍色包裝？,<think>掃描藍色包裝：上層貨架左側有2包淺藍色Poppables。其他貨架上沒有藍色包裝。總共2包藍色包裝。</think><answer>2</answer>
+6.jpg,圖中有幾包紅色包裝？,<think>識別紅色包裝：上層貨架有2包深棕紅色袋子，還有2包鮮紅色Flamin' Hot袋子（上層共4包）。下層貨架有1包紅色Poppables。總共5包紅色或紅色調的包裝。</think><answer>5</answer>
+6.jpg,圖中有幾包綠色包裝？,<think>計算綠色包裝：下層貨架有2包亮綠色Poppables和2包檸檬綠Limón袋子，共4包綠色包裝。上層貨架沒有綠色包裝。總共4包綠色包裝。</think><answer>4</answer>
+7.jpg,請問圖中有幾包紅色包裝的商品？,<think>掃描紅色包裝：上層貨架中間偏右位置清楚顯示3包紅色Hazelnut Quadratini。下層貨架無明顯紅色包裝。總共3包紅色包裝。</think><answer>3</answer>
+7.jpg,圖中總共有幾包藍色包裝的商品？,<think>識別藍色包裝：下層貨架左側和中間區域顯示約3包藍色包裝的香草口味。上層貨架無藍色包裝。總共3包藍色包裝。</think><answer>3</answer>
+7.jpg,圖中有幾包綠色包裝的商品？,<think>掃描綠色包裝：上層貨架中間偏左區域有2包深綠色Matcha Green Tea Quadratini。下層貨架無綠色包裝。總共2包綠色包裝。</think><answer>2</answer>
+8.jpg,請問圖中有幾包綠色包裝的商品？,<think>掃描綠色包裝：左側有1包綠色麻糬/米餅。中間偏右有1包綠色抹茶麻糬/米餅。總共2包明顯綠色包裝的商品。</think><answer>2</answer>
+8.jpg,圖中有幾包黃色包裝的商品？,<think>識別黃色包裝：中間有1大包黃色香蕉麻糬/米餅，可見多個黃色麻糬/米餅。這是圖中唯一以黃色為主的包裝。</think><answer>1</answer>
+9.jpg,請問圖中有幾瓶是白色或奶油色包裝的？,<think>識別白/奶油色瓶身：中間有2瓶奶茶，瓶身為白色配黃色蓋子。左側有1瓶茉莉鮮奶綠，帶有白色元素。大約3瓶以白/奶油色為主的包裝。</think><answer>3</answer>
+9.jpg,圖中有幾瓶的瓶蓋是黃色的？,<think>掃描黃色瓶蓋：中間區域有2瓶帶有明顯黃/金色瓶蓋（奶茶本味）。可見約2瓶黃色瓶蓋。</think><answer>2</answer>
+10.jpg,請問圖中有幾盒紅色包裝的巧克力？,<think>掃描紅色包裝：左側區域有2盒紅色Dark Hazelnut巧克力。右側區域有2盒紅/粉色Strawberry Yogurt巧克力。總共約4盒紅色包裝。</think><answer>4</answer>
+10.jpg,圖中有幾盒藍色包裝的巧克力？,<think>識別藍色包裝：中間偏右區域前排清楚顯示2盒藍色Milk Crème巧克力。背景可能有更多藍色盒子。前排明顯展示約2盒藍色包裝。</think><answer>2</answer>
+10.jpg,左側貨架區域可以識別出幾種不同顏色的包裝？,<think>計算左側貨架顏色：棕/褐色（Coffee & Cream）、黃/金色（Milk Hazelnut）、紅色（Dark Hazelnut 2盒）。左側區域約有3種明顯不同的顏色類型。</think><answer>3</answer>
+11.jpg,前排有幾罐La Victoria莎莎醬？,<think>只計算前排：從左到右，前排完整可見4罐La Victoria Salsa Thick'n Chunky，全部都是Mild口味標籤。</think><answer>4</answer>
+11.jpg,圖中有幾罐是紅色標籤的？,<think>識別紅色標籤：所有可見的罐子都有紅色La Victoria品牌標籤。前排4罐。總共4罐紅色標籤。</think><answer>4</answer>
+12.jpg,請問有幾瓶是紅色標籤的？,<think>掃描紅色標籤：左側和中間區域顯示3瓶Bertolli，帶有明顯的紅色標籤(Extra Virgin Olive Oil)。右側是藍/白色Kroger品牌瓶子。總共3瓶紅色標籤。</think><answer>3</answer>
+12.jpg,圖中可以看到幾瓶Bertolli品牌的橄欖油？,<think>計算Bertolli瓶數：左側有2瓶Bertolli，中間有1瓶紅標籤Bertolli。總共可見3瓶Bertolli Extra Virgin Olive Oil。</think><answer>3</answer>
+13.jpg,請問有幾杯是紅色包裝的？,<think>計算紅色Indomie杯：左側和中間區域顯示2疊紅色杯麵。下層2杯紅色，上層堆疊2杯紅色。總共4杯紅色包裝。</think><answer>4</answer>
+13.jpg,圖中有幾杯黑色包裝的泡麵？,<think>計算黑色Maggi杯：右側顯示黑色Maggi Fusian Mi Goreng杯麵堆疊2層高。底層1杯，上層堆疊1杯。總共2杯黑色包裝。</think><answer>2</answer>
+14.jpg,圖中可以看到幾盒Theraflu品牌的藥品？,<think>計算Theraflu盒數：左側1盒粉紅色Theraflu Flu & Sore Throat，中間偏左1盒黃/橙色Theraflu Severe Cold & Cough，右側1盒綠色Theraflu Cold & Cough。中間是Kroger品牌，非Theraflu。總共3盒Theraflu。</think><answer>3</answer>
+15.jpg,請問有幾罐是藍色標籤的？,<think>掃描藍色標籤：前排所有三罐都有藍綠色/藍色標籤，標示'Reese SELECT HEARTS OF PALM'品牌。清楚可見3罐藍色標籤。</think><answer>3</answer>
+15.jpg,前排有幾罐Reese品牌的商品？,<think>計算前排Reese罐數：從左到右，前排清楚可見3罐Reese Select Hearts of Palm，全部標籤相同。</think><answer>3</answer>
+16.jpg,圖中有幾個罐頭的標籤上有綠色文字？,<think>識別綠色文字：前排所有三個罐頭都在白色背景上顯示'Pickled SLICED BEETS'，其中'Pickled'是綠色文字。清楚可見3個有綠色文字的罐頭。</think><answer>3</answer>
+16.jpg,前排有幾個Signature Select品牌的罐頭？,<think>計算前排Signature Select罐頭：前排所有三個罐頭頂部都顯示'Signature SELECT'黑色標籤。前排總共3個Signature Select罐頭。</think><answer>3</answer>
+17.jpg,請問總共可以看到幾盒雞蛋？,<think>計算所有雞蛋盒：左側顯示3盒排列在一起。右側有1盒分開放置。貨架上總共可見4盒雞蛋。</think><answer>4</answer>
+17.jpg,圖中有幾盒雞蛋有綠色條帶或標籤？,<think>識別綠色條帶：所有可見的雞蛋盒包裝上都有綠色橫向條帶。左側組有3盒，右側組有1盒。總共4盒有綠色條帶。</think><answer>4</answer>
+18.jpg,請問有幾包三明治有紫色條帶或標籤？,<think>識別紫色條帶：左側區域顯示2包帶有紫/紫羅蘭色條帶的三明治（藍莓乳酪口味）。中間和右側區域有不同顏色的條帶。總共2包紫色條帶。</think><answer>2</answer>
+18.jpg,圖中有幾包三明治有橙色條帶或標籤？,<think>掃描橙色條帶：右側區域顯示2包帶有橙色條帶的三明治。左側和中間區域是不同顏色。總共2包橙色條帶。</think><answer>2</answer>
+18.jpg,展示櫃中總共可以看到幾包三明治？,<think>計算所有包裝：左側區域有2包紫色條帶，右側區域有2包橙色條帶。總共可見4包三明治。</think><answer>4</answer>
+19.jpg,請問有幾個來一客泡麵杯？,<think>識別來一客品牌：上層貨架顯示多個來一客品牌的杯麵，有各種顏色包裝。從左到右計數：上層貨架約可見10個來一客杯麵。</think><answer>10</answer>
+19.jpg,請問上層有幾杯來一客是黃色包裝的？,<think>識別黃色包裝：上層左側有2杯明顯的黃色條帶來一客。總共2杯黃色包裝的來一客。</think><answer>2</answer>
+19.jpg,請問上層有幾杯來一客是藍色包裝的？,<think>識別藍色包裝：上層右側有2杯藍色條帶的來一客杯麵，包裝清晰可見。總共2杯藍色包裝。</think><answer>2</answer>
+19.jpg,上層有幾杯來一客是紫色或深紫色包裝的？,<think>掃描紫色包裝：上層中間有2杯紫色或深紫色條帶的來一客，雖然因為角度或光線顯得較暗，但仍可辨識為紫色包裝。總共2杯紫色包裝。</think><answer>2</answer>
+19.jpg,圖中堆疊了幾個阿Q桶麵？,<think>識別阿Q品牌：下層貨架展示阿Q桶麵，有明顯的橙色包裝和大Q標誌。左側區域顯示4個紅標籤杯子堆疊。右側區域顯示4個藍標籤杯子堆疊。下層貨架總共8個阿Q桶麵。</think><answer>8</answer>
+20.jpg,請問有幾包黃色包裝的義美小泡芙？,<think>識別黃色包裝：上層貨架顯示黃色包裝的義美小泡芙，牛奶口味。計算可見包裝：上層貨架清楚可見約5包黃色包裝。</think><answer>5</answer>
+20.jpg,圖中堆疊了幾包粉紅色包裝的義美小泡芙？,<think>計算粉紅草莓泡芙包裝：下層貨架後排顯示約11包粉紅色草莓泡芙標籤。總共約11包粉紅色包裝。</think><answer>11</answer>
+20.jpg,請問有幾包草莓小泡芙？,<think>特定識別草莓口味：所有粉紅色包裝都顯示'STRAWBERRY PUFF'標籤。下層貨架前排約11包草莓小泡芙。</think><answer>11</answer>
+21.jpg,請問有幾個罐子的蓋子是紅色的？,<think>掃描所有罐子的蓋子顏色：前排從左到右所有罐子都有紅色蓋子，計數為6個。後排也可見至少2個紅色蓋子的罐子。前排清楚可見6個紅色蓋子。</think><answer>6</answer>
+21.jpg,前排有幾罐標籤上有藍色或淺藍色？,<think>識別藍色標籤：從左到右掃描前排罐子。左側罐子是紫色和棕色標籤，中間區域有1個罐子帶有明顯的淺藍色標籤（非基因改造黃豆），右側是棕色和粉紅色標籤。前排只有1個藍色標籤罐子。</think><answer>1</answer>
+21.jpg,請問前排有幾罐標籤上寫著「豆腐乳」？,<think>識別「豆腐乳」文字：掃描前排所有罐子的標籤。最左側紫色標籤寫著「豆腐乳」，第二個棕色標籤寫著「南乳」，最右側粉紅色標籤寫著「真味豆腐乳」。共有2個罐子標籤上明確寫著「豆腐乳」。</think><answer>2</answer>
+22.jpg,請問有幾盒是綠色包裝的？,<think>掃描綠色包裝：最左側有1盒綠色檸檬薄餅，最右側有1盒綠色穀類早餐餅，後排頂部還有1盒綠色包裝。總共可見3盒綠色包裝。</think><answer>3</answer>
+22.jpg,前排有幾盒義美薄餅？,<think>識別義美薄餅：前排從左到右有綠色檸檬薄餅、紅色紅麴薄餅、藍色鮮乳薄餅，全部都標示「義美」品牌。前排3盒都是義美薄餅。</think><answer>3</answer>
+22.jpg,圖中有幾盒包裝是藍色的？,<think>識別藍色包裝：前排中間偏右有1盒明顯的藍色鮮乳薄餅包裝。其他盒子是綠色、紅色、棕色等顏色。只有1盒藍色包裝。</think><answer>1</answer>
+23.jpg,圖中有幾瓶的瓶身是綠色的？,<think>識別綠色瓶身：從左到右掃描，最左側1瓶有綠色瓶身，中間區域有1瓶綠色瓶身。總共約2瓶綠色瓶身可見。</think><answer>2</answer>
+23.jpg,請問有幾瓶標籤上寫著「黑豆漿」？,<think>識別「黑豆漿」文字：右側兩瓶大字清楚顯示「黑豆漿」，黃色瓶蓋配透明瓶身。總共2瓶標示黑豆漿。</think><answer>2</answer>
+23.jpg,圖中有幾瓶的瓶蓋是紅色的？,<think>識別紅色瓶蓋：從左到右掃描，中間區域有1瓶紅色瓶蓋。總共約1瓶紅色瓶蓋可見。</think><answer>1</answer>
+24.jpg,請問有幾瓶藍色原味健酪健酪？,<think>識別藍色原味健酪：左側區域顯示4瓶藍色包裝的健酪 YoGo Fresh 原味乳酸飲料，瓶身有明顯藍色條紋設計。</think><answer>4</answer>
+24.jpg,圖中有幾瓶是檸檬雪酪口味健酪飲料？,<think>掃描檸檬雪酪口味：中間區域有2瓶黃綠色包裝，檸檬雪酪口味的健酪，瓶身有黃色和檸檬圖案。</think><answer>2</answer>
+24.jpg,請問有幾瓶是綠色瓶身的飲料？,<think>識別綠色瓶身：最右側有1瓶完整的綠色透明瓶身飲料（奧利多），與左側白色瓶身的健酪系列不同。只有1瓶綠色瓶身。</think><answer>1</answer>
+25.jpg,請問有幾瓶飲料的瓶蓋是白色的？,<think>掃描白色瓶蓋：前排所有可見的飲料瓶都有白色瓶蓋。從左到右計數，可見4瓶帶有白色瓶蓋的飲料。</think><answer>4</answer>
+25.jpg,圖中有幾瓶標籤上有橙色條帶？,<think>識別橙色條帶：中間3瓶燕麥飲料的標籤上都有明顯的橙色條帶設計。總共3瓶有橙色條帶。</think><answer>3</answer>
+25.jpg,請問左側有幾盒是紫色包裝的葡萄汁？,<think>識別紫色葡萄汁：最左側有1盒明顯的紫色包裝，標示「園之味 100% 葡萄汁」和葡萄圖案。只有1盒紫色葡萄汁。</think><answer>1</answer>
+26.jpg,請問上層貨架有幾盒標示「御茶園」品牌的飲料？,<think>識別「御茶園」品牌：上層左側第1盒紅色包裝寫著「御茶園 特上紅茶」，第2盒粉色包裝寫著「御茶園 特上奶茶」。總共2盒御茶園品牌飲料。</think><answer>2</answer>
+26.jpg,上層貨架有幾盒標示「波蜜」品牌的果汁？,<think>掃描「波蜜」品牌文字：中間綠色包裝寫著「波蜜 芭樂汁 Guava Juice」，旁邊有「波蜜 蔬果汁」（綠色或橙色包裝），右側紫色包裝寫著「波蜜 葡萄汁 Grape Juice」。上層共3盒波蜜品牌。</think><answer>3</answer>
+26.jpg,請問有幾盒標籤上寫著「特上」兩個字？,<think>識別「特上」文字：左側第1盒「御茶園 特上 紅茶」有「特上」字樣，第2盒「御茶園 特上 奶茶」也有「特上」字樣。貨架也有標示「御茶園特上奶茶系列」的標籤。上層至少2盒明確標示「特上」。</think><answer>2</answer>
+27.jpg,請問有幾包是黃色包裝的 Mee Baa...gus 泡麵？,<think>識別黃色包裝：左側有2包堆疊的黃色包裝 Mee Baa...gus，標示 SOTO AYAM Shiok 口味。總共2包黃色包裝。</think><answer>2</answer>
+27.jpg,圖中有幾包是白色包裝的泡麵？,<think>掃描白色包裝：右側有1包堆疊的白色包裝，標示 Perisa ASLI 原味。總共1包白色包裝。</think><answer>1</answer>
+27.jpg,請問總共有幾包 Mee Baa...gus 泡麵在貨架上？,<think>計算所有 Mee Baa...gus：左側2包黃色 SOTO AYAM，右側1包白色 Mi Goreng。全部都是 Mee Baa...gus 品牌。總共3包。</think><answer>3</answer>
+28.jpg,請問有幾杯阿Q桶麵的標籤是紅色條帶的？,<think>識別紅色條帶標籤：左側列有3杯帶紅色條帶的阿Q桶麵，從上到下堆疊。其他列是藍色和橙色條帶。總共3杯紅色條帶。</think><answer>3</answer>
+28.jpg,圖中有幾杯阿Q桶麵的標籤是藍色條帶的？,<think>掃描藍色條帶：中間列顯示3杯帶藍色條帶的阿Q桶麵，從上到下堆疊3層。總共3杯藍色條帶。</think><answer>3</answer>
+28.jpg,請問總共疊了幾杯完整可見的阿Q桶麵？,<think>計算所有杯數：左列3杯（紅色條帶），中列3杯（藍色條帶），右列3杯（橙色條帶）。總共3列×3層=9杯阿Q桶麵。</think><answer>9</answer>
+29.jpg,請問有幾杯標示「川辣牛肉風味」的泡麵？,<think>識別「川辣牛肉風味」文字：中間偏左側有兩杯標示「川辣牛肉風味」。共兩杯泡麵。</think><answer>2</answer>
+29.jpg,請問最前排上層和下層總共有幾杯泡麵？,<think>計算總杯數：最前排上層有4杯可見，下層也有4杯排列。總共2層×4杯=8杯泡麵。</think><answer>8</answer>
+30.jpg,請問前排有幾個罐子的蓋子是紅色的？,<think>掃描紅色蓋子：最左側有1個大罐紅蓋（豆瓣醬），左側還有1個小罐紅蓋，最右側有1個大罐紅蓋（龍眼）。前排至少可見3個明顯的紅色蓋子。</think><answer>3</answer>
+30.jpg,前排有幾個罐子的標籤是白色為主的？,<think>識別白色標籤：前排中間有2個罐子帶有白色蓋子和標籤（香椿拌醬）。其他罐子主要是粉紅色、黃色的標籤。前排有2個白色為主的標籤。</think><answer>2</answer>
+30.jpg,請問前排有幾個標籤是「香椿拌醬」的罐子？,<think>識別「香椿拌醬」文字：前排中間有2個罐子帶有標籤「香椿拌醬」。總共可見2個罐子。</think><answer>2</answer>
+31.jpg,請問有幾瓶標籤上寫著「鳳梨酢」或「Pineapple Vinegar」？,<think>識別鳳梨酢文字：左側有3瓶黃色標籤，清楚寫著「鳳梨酢 Pineapple Vinegar」和「KONG YEN」品牌。總共3瓶鳳梨酢。</think><answer>3</answer>
+31.jpg,圖中有幾瓶標籤上寫著「陳年酢」？,<think>掃描陳年酢文字：中間有2瓶綠色標籤，上面寫著「陳年酢」和工研品牌標誌。總共2瓶陳年酢。</think><answer>2</answer>
+31.jpg,請問前排有幾瓶的瓶蓋是黃色的？,<think>掃描黃色瓶蓋：前排所有可見的酢瓶都有黃色瓶蓋，包括3瓶鳳梨酢、2瓶陳年酢。前排總共5瓶黃色瓶蓋。</think><answer>5</answer>
+32.jpg,請問有幾瓶標籤上寫著「果酢日和」或「FRUIT VINEGAR」？,<think>識別果酢日和文字：中間和右側有3瓶白色標籤，清楚寫著「果酢日和 FRUIT VINEGAR」，包括梅子果酢和百香果果酢。總共3瓶果酢日和。</think><answer>3</answer>
+32.jpg,圖中有幾瓶的標籤是綠色的？,<think>識別綠色標籤：左側有2瓶綠色標籤的糯米酢。總共2瓶綠色標籤。</think><answer>2</answer>
+32.jpg,請問有幾瓶的瓶蓋是黑色的？,<think>掃描黑色瓶蓋：中間區域有3瓶果酢日和系列，都配有明顯的黑色瓶蓋。總共3瓶黑色瓶蓋。</think><answer>3</answer>
+33.jpg,請問有幾瓶標籤上寫著「工研烏酢」？,<think>識別「工研烏酢」文字：中間2瓶紅色標籤有黃色圓形標誌寫著「工研烏酢」。總共2瓶標示工研烏酢。</think><answer>2</answer>
+33.jpg,圖中有幾瓶的標籤是紅色的？,<think>掃描紅色標籤：中間有2瓶明顯的紅色標籤，上面有黃色圓形「工研烏酢」標誌。總共2瓶紅色標籤。</think><answer>2</answer>
+33.jpg,請問有幾瓶的標籤是白色帶金色邊框的？,<think>識別白色金邊標籤：左側有2瓶白色標籤帶金色邊框，寫著「糯米醋」字樣。總共2瓶白色金邊標籤。</think><answer>2</answer>
+34.jpg,請問有幾瓶標籤上寫著「正蔭油」？,<think>識別「正蔭油」文字：掃描所有瓶子標籤，中間區域有2瓶標籤上清楚寫著「正蔭油」字樣，分別搭配橙色和紫色瓶蓋。總共2瓶正蔭油。</think><answer>2</answer>
+34.jpg,請問有幾瓶標籤上寫著「瑞春伯」？,<think>識別「瑞春伯」文字：掃描所有瓶子標籤，左側區域有2瓶標籤上清楚寫著「瑞春伯」字樣。總共2瓶瑞春伯。</think><answer>2</answer>
+34.jpg,圖中有幾瓶的瓶蓋是橙色的？,<think>識別橙色瓶蓋：左側第3瓶（從左數）有明顯的橙色瓶蓋。總共1瓶橙色瓶蓋。</think><answer>1</answer>
+34.jpg,請問有幾瓶的瓶蓋是紫色或深紫色的？,<think>掃描紫色瓶蓋：中間偏右有1瓶明顯的深紫色瓶蓋，標籤上寫著「正蔭油」。總共1瓶紫色瓶蓋。</think><answer>1</answer>
+35.jpg,請問有幾罐標籤上寫著「綠巨人」？,<think>識別「綠巨人」文字：所有可見的罐頭標籤上都清楚寫著「綠巨人 Green Giant」品牌名稱。前排左側堆疊2罐，前排中間和右側各1罐。總共4罐綠巨人玉米罐。</think><answer>4</answer>
+35.jpg,圖中有幾罐是堆疊放置的？,<think>識別堆疊：左側明顯有2罐上下堆疊。其他罐頭是平放排列。總共2罐處於堆疊狀態。</think><answer>2</answer>
+35.jpg,請問總共有幾個罐頭？,<think>識別罐頭數量：前排左側堆疊2罐，前排中間和右側各1罐。總共4罐綠巨人玉米罐。</think><answer>4</answer>

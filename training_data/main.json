@@ -1,8 +1,353 @@
 [
     {
         "image": "1.jpg",
-        "question": "請問圖中有多少個ALISA罐頭？",
-        "answer": "<think>左邊堆疊兩層，每層兩個ALISA罐頭，共四個。</think><answer>4</answer>"
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊ALISA橄欖罐頭堆疊4罐，中間紅色醃漬罐2罐，右邊黃色罐2罐</think><answer>ALISA橄欖罐頭(白紫):4,醃漬罐頭(紅):2,醃漬罐頭(黃):2</answer>"
+    },
+    {
+        "image": "2.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊有2包紫色包裝的Fresh Express Kit Caesar凱薩沙拉套裝，右邊有1包粉紅標籤的Spring Mix春季綜合沙拉。</think><answer>Fresh Express Kit Caesar(紫):2,Fresh Express Spring Mix(粉紅):1</answer>"
+    },
+    {
+        "image": "3.jpg",
+        "question": "n",
+        "answer": "<think>全部都是McVitie's消化餅乾，共5包紅色包裝。</think><answer>McVitie's Digestive(紅):5</answer>"
+    },
+    {
+        "image": "4.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為左邊1包黃色Sunflower葵花籽麵包，右邊1包紅色Whole Rye全麥黑麥麵包。</think><answer>Mestemacher Sunflower Seed Bread(黃):1,Mestemacher Whole Rye Bread(紅):1</answer>"
+    },
+    {
+        "image": "5.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為左邊3包紅橙色Digestive餅乾，右邊3包藍色Rich Tea餅乾。</think><answer>Burton's Digestive(紅橙):3,Burton's Rich Tea(藍):3</answer>"
+    },
+    {
+        "image": "6.jpg",
+        "question": "n",
+        "answer": "<think>上層由左至右分別為，左邊2包藍色Poppables，中間4包紅色口味，右邊2包橙色口味。下層由左至右分別為，左邊1包紅色Poppables，中間2包綠色Poppables和2包檸檬口味，右邊3包黃色蜂蜜烤肉口味。</think><answer>Lay's Poppables(藍):2,Lay's(紅):4,Lay's(橙):2,Lay's Poppables(紅):1,Lay's Poppables(綠):2,Lay's Limón(綠):2,Lay's Honey Barbecue(黃):3</answer>"
+    },
+    {
+        "image": "7.jpg",
+        "question": "n",
+        "answer": "<think>上層由左至右分別為，左邊2包黃色Quadratini，中間2包綠色抹茶口味和3包紅色榛果口味，右邊2包深色口味。下層由左至右分別為，左邊3包藍色香草口味，中間2包紫色藍莓口味和2包覆盆子口味，右邊1包深色巧克力口味。</think><answer>Loacker Quadratini(黃):2,Loacker Quadratini Matcha(綠):2,Loacker Quadratini Hazelnut(紅):3,Loacker Quadratini(深):2,Loacker Quadratini Vanilla(藍):3,Loacker Quadratini Blueberry(紫):2,Loacker Quadratini Raspberry(粉):2,Loacker Quadratini Dark Chocolate(深棕):1</answer>"
+    },
+    {
+        "image": "8.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1盒綠色哈密瓜麻糬，中間1盒黃色香蕉麻糬和1盒綠茶麻糬，右邊1盒粉色紅豆麻糬。</think><answer>哈密瓜麻糬(綠):1,香蕉麻糬(黃):1,抹茶麻糬(深綠):1,紅豆麻糬(粉):1</answer>"
+    },
+    {
+        "image": "9.jpg",
+        "question": "n",
+        "answer": "<think>左邊1瓶綠色茉莉鮮奶綠茶，中間2瓶奶茶本味，右邊1瓶老北京御品仙楂洛神。</think><answer>茉莉鮮奶綠茶(綠):1,奶茶本味(白):2,老北京仙洛神(黃):1</answer>"
+    },
+    {
+        "image": "10.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1盒咖啡奶油口味，1盒牛奶榛果口味，中間2盒深紅色榛果口味，2盒藍色牛奶奶油口味，右邊2盒粉色草莓優格口味。</think><answer>Choceur Coffee & Cream(棕):1,Choceur Milk Hazelnut(橙):1,Choceur Dark Hazelnut(紅):2,Choceur Milk Crème(藍):2,Choceur Strawberry Yogurt(粉):2</answer>"
+    },
+    {
+        "image": "11.jpg",
+        "question": "n",
+        "answer": "<think>貨架上都是La Victoria莎莎醬，共4瓶都是紅色包裝。</think><answer>La Victoria Salsa Thick'n Chunky(紅):4</answer>"
+    },
+    {
+        "image": "12.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊3瓶Bertolli橄欖油，右邊2瓶Kroger橄欖油。</think><answer>Bertolli Extra Virgin Olive Oil(綠):3,Kroger Extra Virgin Olive Oil(綠):2</answer>"
+    },
+    {
+        "image": "13.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊4杯Indomie泡麵，右邊2杯Maggi Mi Goreng泡麵。</think><answer>Indomie Instant Cup Noodles(紅):4,Maggi Fusion Mi Goreng(黑):2</answer>"
+    },
+    {
+        "image": "14.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1盒粉色Theraflu感冒藥，1盒黃色Theraflu，中間1盒藍色DayTime感冒藥，右邊1盒綠色Theraflu。</think><answer>Theraflu Flu & Sore Throat(粉):1,Theraflu Severe Cold & Cough(黃):1,Kroger DayTime Flu(藍):1,Theraflu Severe Cold & Cough(綠):1</answer>"
+    },
+    {
+        "image": "15.jpg",
+        "question": "n",
+        "answer": "<think>貨架上3罐Reese Hearts of Palm棕櫚心罐頭。</think><answer>Reese Hearts of Palm(黃藍):3</answer>"
+    },
+    {
+        "image": "16.jpg",
+        "question": "n",
+        "answer": "<think>貨架上3罐Signature Select醃漬甜菜罐頭。</think><answer>Signature Select Pickled Sliced Beets(紅綠):3</answer>"
+    },
+    {
+        "image": "17.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，中間3盒雞蛋，右邊1盒雞蛋。</think><answer>雞蛋(白盒):4</answer>"
+    },
+    {
+        "image": "18.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2個紫色藍莓乳酪三明治，右邊2個雙倍起司火腿蛋三明治。</think><answer>原賞藍莓乳酪三明治(紫):2,原賞雙倍起司火腿蛋三明治(橙):2</answer>"
+    },
+    {
+        "image": "19.jpg",
+        "question": "n",
+        "answer": "<think>上層10個來一客泡麵。下層8個阿Q桶麵。</think><answer>來一客(白):10,阿Q桶麵(橙):8</answer>"
+    },
+    {
+        "image": "20.jpg",
+        "question": "n",
+        "answer": "<think>上層5包黃色義美小泡芙牛奶口味，下層11包粉色義美小泡芙草莓口味。</think><answer>義美小泡芙牛奶(黃):5,義美小泡芙草莓(粉):11</answer>"
+    },
+    {
+        "image": "21.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1罐苦茶腐乳和1罐南乳，中間1罐花椒辣腐乳和1罐非基因改造麻油白腐乳，右邊1罐豆乳醬和1罐真味豆腐乳。</think><answer>苦茶油腐乳(紫):2,南乳(紫紅):1,花椒辣腐乳(黑):1,非基因改造麻油白腐乳(藍):1,豆乳醬(紅橙):1,真味豆腐乳(粉):1</answer>"
+    },
+    {
+        "image": "22.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1盒檸檬薄餅，1盒紅麴薄餅，中間1盒鮮乳薄餅，1盒Crunchoco杏仁巧克力酥片，右邊1盒Cracker蘇打夾心餅。</think><answer>義美檸檬薄餅(綠):1,義美紅麴薄餅(粉):1,義美鮮乳薄餅(藍):1,義美Crunchoco杏仁巧克力酥片(棕):1,義美Cracker蘇打夾心餅(綠):1</answer>"
+    },
+    {
+        "image": "23.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1瓶綠色飲料，1瓶原萃茶，中間1瓶紅色瓶蓋飲料，1瓶冷萃茶，右邊2瓶黑豆漿。</think><answer>飲料(綠):1,原萃茶(橙):1,飲料(紅):1,冷萃茶(綠):1,黑豆漿(黃):2</answer>"
+    },
+    {
+        "image": "24.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊4瓶健酪乳酸飲料，中間2瓶健酪YoGo Fresh，右邊1瓶奧利多水。</think><answer>健酪乳酸飲料(白藍):4,健酪YoGo Fresh(黃綠):2,奧利多水(綠):1</answer>"
+    },
+    {
+        "image": "25.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1瓶葡萄汁，中間4瓶高纖燕麥穀奶。</think><answer>園之味葡萄汁(紫):1,高纖燕麥穀奶(橙):4</answer>"
+    },
+    {
+        "image": "26.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1瓶特紅茶，1瓶特奶茶，中間1瓶芭樂汁，1瓶波蜜果菜汁，1瓶葡萄汁，右邊1瓶蔓越莓汁。</think><answer>御茶園特上紅茶(紅):1,御茶園特上奶茶(米):1,波蜜芭樂汁(綠):1,波蜜果菜汁(橙):1,波蜜葡萄汁(紫):1,優鮮沛蔓越莓汁(藍):1</answer>"
+    },
+    {
+        "image": "27.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2包Mee Baa..gus雞肉口味泡麵，右邊1盒6入裝Mee Baa..gus泡麵。</think><answer>Mee Baa..gus Soto Ayam(黃綠):2,Mee Baa..gus Mi Segar(白):1</answer>"
+    },
+    {
+        "image": "28.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，第一排：3個紅色阿Q桶麵，第二排：3個藍色阿Q桶麵，第三排：3個橙色阿Q桶麵。</think><answer>阿Q桶麵(紅橙):3,阿Q桶麵(藍橙):3,阿Q桶麵(橙):3</answer>"
+    },
+    {
+        "image": "29.jpg",
+        "question": "n",
+        "answer": "<think>全部都是來一客泡麵，共9個白色包裝。</think><answer>來一客(白):9</answer>"
+    },
+    {
+        "image": "30.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1罐豆瓣醬，1罐豆豉，1罐麻油醬，中間2罐香椿拌醬，右邊2瓶龍眼蜜。</think><answer>豆瓣醬(紅):1,豆豉(粉):1,麻油醬(綠):1,香椿拌醬(白):2,龍眼蜜(棕):2</answer>"
+    },
+    {
+        "image": "31.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊3瓶黃色工研鳳梨醋，中間2瓶綠色陳年醋，右邊部分看到果醋。</think><answer>工研鳳梨醋(黃):3,工研陳年醋(綠):2</answer>"
+    },
+    {
+        "image": "32.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2瓶綠色陳年醋，中間1瓶梅子果醋和2瓶百香果果醋，右邊1瓶康普。</think><answer>工研陳年醋(綠):2,果醋日和梅子果醋(白):1,果醋日和百香果果醋(白):2,康普(橙):1</answer>"
+    },
+    {
+        "image": "33.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2瓶糯米醋，中間2瓶工研烏醋，右邊2瓶工研醋。</think><answer>糯米醋(白):2,工研烏醋(紅):2,工研醋(綠):2</answer>"
+    },
+    {
+        "image": "34.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2瓶瑞春伯醬油，中間1瓶橙色正蔭油醬油和1瓶紫色正蔭油醬油，右邊1瓶蘭級清油，1瓶菊級清油和1瓶胡麻油。</think><answer>瑞春伯(黃):2,正蔭油(橙):1,正蔭油(紫):1,蘭級清油(粉):1,菊級清油(黃):1,胡麻油(銀):1</answer>"
+    },
+    {
+        "image": "35.jpg",
+        "question": "n",
+        "answer": "<think>全部都是綠巨人玉米粒，共4罐綠巨人玉米粒。</think><answer>綠巨人珍珠玉米粒(綠紅):4</answer>"
+    },
+    {
+        "image": "36.jpg",
+        "question": "n",
+        "answer": "<think>全部都是青葉麵筋罐頭，部分罐頭的文字被遮擋，共9罐青葉麵筋罐頭。</think><answer>青葉麵筋(綠):9</answer>"
+    },
+    {
+        "image": "37.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左側有1罐白色的有機細緻黑芝麻粉，2罐淺綠色罐身的桂格高鈣脫脂奶粉，呈現上下堆疊，中間有2罐粉紅色罐身的桂格膠原蛋白高鐵高鈣奶粉，呈現上下堆疊，右側有2罐深綠色罐身的桂格葡萄糖胺高鈣奶粉，呈現上下堆疊，右側有1罐銀色的克寧銀養高鈣Omega3奶粉。</think><answer>有機細緻黑芝麻粉(白色):1,桂格高鈣脫脂奶粉(淺綠色):2,桂格膠原蛋白高鐵高鈣奶粉(粉色):2,桂格葡萄糖胺高鈣奶粉(深綠色):2,克寧銀養高鈣Omega3奶粉(銀色):1</answer>"
+    },
+    {
+        "image": "38.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊4包五月花抽取式衛生紙，中間4包深藍色厚棒衛生紙，右邊3包橙色五月花紙巾。</think><answer>五月花抽取式衛生紙(黃):4,厚棒衛生紙(深藍):4,五月花紙巾(橙):3</answer>"
+    },
+    {
+        "image": "39.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2包蒲公英衛生紙，右邊3包得意抽取式衛生紙。</think><answer>蒲公英衛生紙(綠白):2,得意抽取式衛生紙(藍黃):3</answer>"
+    },
+    {
+        "image": "40.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，3瓶Mr.Brown Pure Brew咖啡，3瓶韋恩咖啡。</think><answer>Mr.Brown Pure Brew(白):3,韋恩咖啡(棕):3</answer>"
+    },
+    {
+        "image": "41.jpg",
+        "question": "n",
+        "answer": "<think>由左至右共有8個直排。第1排：2罐是橘色包裝。\n第2排：3罐皆為紅色包裝。\n第3排：3罐皆為綠色包裝。\n第4排：3罐皆為白色包裝。\n第5排：3罐皆為棕色包裝。\n第6排：3罐皆為藍色包裝。\n第7排：2罐皆為紫紅色包裝。\n第8排：2罐皆為黑色包裝。\n</think>\n<answer>伯朗咖啡曼特寧(橘):2,伯朗咖啡卡布奇諾(紅):3,伯朗咖啡(綠):3,伯朗咖啡(白):3,伯朗咖啡原味(棕):3,伯朗咖啡藍山風味(藍):3,伯朗咖啡EX雙倍濃烈(紫紅):2,伯朗咖啡(黑):3</answer>"
+    },
+    {
+        "image": "42.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2瓶野菜一日飲料，1瓶可果美番茄汁，中間2瓶冷山茶王，右邊2瓶寶礦力水得。</think><answer>野菜一日(紅綠):2,可果美番茄汁(淺黃):1,冷山茶王(藍):2,寶礦力水得(藍):2</answer>"
+    },
+    {
+        "image": "43.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2瓶寶礦力水得，2罐橙色Tree Top，2罐綠色汽水，右邊1瓶椰子水和2瓶Tree Top蘋果汁。</think><answer>寶礦力水得(藍):2,Tree Top Sparkling Orange(橙):2,汽水(綠):2,椰子水(藍):1,Tree Top蘋果汁(棕):2</answer>"
+    },
+    {
+        "image": "44.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2罐綠色汽水，1瓶椰子水，中間2瓶Tree Top蘋果汁，右邊1瓶橙色Georgia雲朵拿鐵，1瓶棕色Georgia雲朵拿鐵和1瓶飲料。</think><answer>汽水(綠):2,椰子水(藍):1,Tree Top蘋果汁(棕):2,Georgia雲朵拿鐵(橙):1,Georgia雲朵拿鐵(棕):1,飲料(白):1</answer>"
+    },
+    {
+        "image": "45.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1瓶朝露紅茶，中間3瓶茉莉蜜茶，右邊3瓶冷泡茶。</think><answer>朝露紅茶(紅):1,茉莉蜜茶(黃):3,冷泡茶(綠):3</answer>"
+    },
+    {
+        "image": "46.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1瓶奧利多水，2瓶伊藤園茶，中間1瓶蘋果紅茶，1瓶冷泡茶冰釀烏龍，1瓶朝露紅茶，右邊1瓶茉莉蜜茶。</think><answer>奧利多水(綠):1,伊藤園茶(綠):2,蘋果紅茶(粉):1,冷泡茶冰釀烏龍(黃):1,朝露紅茶(紅):1,茉莉蜜茶(黃):1</answer>"
+    },
+    {
+        "image": "47.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊3瓶統一木瓜牛乳，右邊4瓶飲冰室茶集紅奶茶。</think><answer>統一木瓜牛乳(橙):3,飲冰室茶集紅奶茶(粉):4</answer>"
+    },
+    {
+        "image": "48.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2瓶寶礦力水得，2瓶朝露綠茶，右邊2瓶御茶園綠茶和2瓶冷泡茶冷韻清茶。</think><answer>寶礦力水得(藍):2,朝露綠茶(綠):2,御茶園(綠):2,冷泡茶冷韻清茶(藍):2</answer>"
+    },
+    {
+        "image": "49.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊2罐牛奶，右邊2罐荔枝風味氣泡飲。</think><answer>牛奶(藍白):2,荔枝風味氣泡飲(粉):2</answer>"
+    },
+    {
+        "image": "50.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1罐偉恩咖啡，1罐Mountain Dew，1罐可口可樂，右邊1罐健酪乳酸飲料和1罐荔枝飲料。</think><answer>偉恩咖啡(黑):1,Mountain Dew(綠):1,Coca-Cola(紅):1,健酪乳酸飲料(白):1,荔枝(粉):1</answer>"
+    },
+    {
+        "image": "51.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，2杯來一客泡麵，2杯黑色Buldak辣雞麵，2杯粉色Buldak辣雞麵。</think><answer>來一客(紅):2,Buldak(黑):2,Buldak(粉):2</answer>"
+    },
+    {
+        "image": "52.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1杯黑色Buldak辣雞麵，2杯粉色Buldak辣雞麵，2杯黃色隨緣椎茸味麵。</think><answer>Buldak(黑):1,Buldak(粉):2,隨緣椎茸味麵(黃):2</answer>"
+    },
+    {
+        "image": "53.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，2碗小時光麵，2碗味味A排骨雞湯麵，2碗味味A冬菜鴨肉湯粉絲。</think><answer>小時光(黃):2,味味A排骨雞湯麵(紅):2,味味A冬菜鴨肉湯粉絲(紅):2</answer>"
+    },
+    {
+        "image": "54.jpg",
+        "question": "n",
+        "answer": "<think>全部都是統一麵蔥燒牛肉，共4碗統一麵蔥燒牛肉。</think><answer>統一麵蔥燒牛肉(黃):4</answer>"
+    },
+    {
+        "image": "55.jpg",
+        "question": "n",
+        "answer": "<think>全部都是台酒花雕雞麵，共2碗台酒花雕雞麵。</think><answer>台酒花雕雞麵(棕):2</answer>"
+    },
+    {
+        "image": "56.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1碗麻油雞麵，1碗台酒花雕酸菜牛肉麵。</think><answer>麻油雞麵(紅):1,台酒花雕酸菜牛肉麵(黑):1</answer>"
+    },
+    {
+        "image": "57.jpg",
+        "question": "n",
+        "answer": "<think>全部都是台酒花雕酸菜牛肉麵，共2碗台酒花雕酸菜牛肉麵。</think><answer>台酒花雕酸菜牛肉麵(黃黑):2</answer>"
+    },
+    {
+        "image": "58.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1碗一度贊爌肉麵，1碗一度贊濃番茄牛肉麵。</think><answer>一度贊爌肉麵(橙):1,一度贊濃番茄牛肉麵(紅):1</answer>"
+    },
+    {
+        "image": "59.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1碗一度贊紅燒牛肉麵，1碗一度贊爌肉麵。</think><answer>一度贊紅燒牛肉麵(紅):1,一度贊爌肉麵(橙):1</answer>"
+    },
+    {
+        "image": "60.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，2碗一度贊紅燒牛肉麵，1碗一度贊爌肉麵。</think><answer>一度贊紅燒牛肉麵(紅):2,一度贊爌肉麵(橙):1</answer>"
+    },
+    {
+        "image": "61.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1瓶黑色世界一咖啡，1瓶黃色世界一咖啡，1瓶UCC BLACK咖啡，1瓶Georgia Latte，1瓶Georgia Black，1瓶Purple飲料。</think><answer>世界一咖啡(黑):1,世界一咖啡(黃):1,UCC BLACK(黑):1,Georgia Latte(白):1,Georgia Black(黑):1,Purple飲料(紫):1</answer>"
+    },
+    {
+        "image": "62.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，左邊1瓶原萃冷萃茶，1瓶DyDo拿鐵咖啡，1瓶DyDo黑咖啡，中間1罐世界一黑咖啡，1罐世界一拿鐵咖啡，右邊1罐UCC無糖黑咖啡。</think><answer>原萃冷萃茶(橘):1, DyDo拿鐵咖啡(淺棕):1, DyDo黑咖啡(黑金):1, 世界一黑咖啡(黑):1, 世界一拿鐵咖啡(金):1, UCC無糖黑咖啡(黑):1</answer>"
+    },
+    {
+        "image": "63.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1瓶韋恩咖啡，1瓶ROASTA咖啡，2罐Red Bull，1罐白色魔爪能量飲料，1罐黑色魔爪能量飲料。</think><answer>韋恩咖啡(黑):1,ROASTA(黑黃):1,Red Bull(藍):2,魔爪能量飲料(白):1,魔爪能量飲料(黑):1</answer>"
+    },
+    {
+        "image": "64.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1瓶午後紅茶，1瓶無糖午後紅茶，1瓶伊藤園Tea，1瓶可爾必思。</think><answer>午後紅茶(棕):1,無糖午後紅茶(棕):1,伊藤園Tea(黃):1,可爾必思(白):1</answer>"
+    },
+    {
+        "image": "65.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1瓶御茶園，1瓶波蜜BCE，1瓶泡沫綠茶，1瓶日月紅玉紅茶，2瓶古道綠茶。</think><answer>御茶園(黃):1,波蜜BCE(橙):1,泡沫綠茶(綠):1,日月紅玉紅茶(紅):1,古道綠茶(綠):2</answer>"
+    },
+    {
+        "image": "66.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，2瓶舒跑，2瓶FIN礦泉水，1瓶黑松汽水。</think><answer>舒跑(綠):2,FIN(藍):2,黑松汽水(黑):1</answer>"
+    },
+    {
+        "image": "67.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，2瓶十六茶，1瓶分解茶四季春，1瓶分解茶麥茶，1瓶原萃東方美人茶，2瓶每朝健康熟藏紅茶。</think><answer>十六茶(綠):2,分解茶四季春(紫):1,分解茶麥茶(淺藍):1,原萃東方美人茶(藍):1,每朝健康熟藏紅茶(紅):2</answer>"
+    },
+    {
+        "image": "68.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1瓶巧克力奶茶，1瓶檸檬紅茶，1瓶梅仔風味綠茶，2瓶十六茶，1瓶分解茶四季春，1瓶分解茶麥茶。</think><answer>巧克力奶茶(棕):1,檸檬紅茶(黃):1,梅仔風味綠茶(綠):1,十六茶(綠):2,分解茶四季春(紫):1,分解茶麥茶(淺藍):1</answer>"
+    },
+    {
+        "image": "69.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1瓶麥香阿薩姆奶茶，2瓶茶裏王半熟金萱，1瓶綠茶，1瓶烏龍茶。</think><answer>麥香阿薩姆奶茶(白):1,茶裏王半熟金萱(橙):2,綠茶(綠):1,烏龍茶(粉):1</answer>"
+    },
+    {
+        "image": "70.jpg",
+        "question": "n",
+        "answer": "<think>由左至右分別為，1瓶烏龍茶，2瓶麥萃冰釀麥萃，1瓶麥萃日式麥茶。</think><answer>烏龍茶(粉):1,麥萃冰釀麥萃(橙):1,麥萃日式麥茶(藍):2</answer>"
     },
     {
         "image": "1.jpg",

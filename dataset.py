@@ -72,3 +72,18 @@ for item in data:
 train_dataset = Dataset.from_list(dataset_list)
 print(f"Loaded {len(train_dataset)} samples from custom training data")
 print(f"Dataset columns: {train_dataset.column_names}")
+
+
+ds = load_dataset("json", data_files={"train": "./training_data/main.json"})
+
+print(f"ds: {ds}")
+
+for i, sample in enumerate(ds['train']):
+    if( i == 0):
+        print(f"Sample {i} image: {sample['image']}")
+        print(f"Sample {i} problem: {sample['question']}")
+        print(f"Sample {i} solution: {sample['answer']}")
+        break
+    
+
+# ds = load_dataset("csv", data_files=csv_path, split="train")
