@@ -50,3 +50,5 @@ wheels/
 checkpoints/
 Qwen*/
 training_data/
+training_data/images
+pyvenv/
