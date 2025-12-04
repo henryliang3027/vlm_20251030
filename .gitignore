@@ -49,3 +49,4 @@ wheels/
 # Checkpoints directory
 checkpoints/
 Qwen*/
+training_data/
