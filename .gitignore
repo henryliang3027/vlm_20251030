@@ -1,5 +1,5 @@
 # Python virtual environment
-myvenv/
+pyvenv/
 venv/
 env/
 ENV/
@@ -51,4 +51,4 @@ checkpoints/
 Qwen*/
 training_data/
 training_data/images
-pyvenv/
+
