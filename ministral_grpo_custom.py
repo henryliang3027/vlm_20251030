@@ -1,21 +1,58 @@
-from huggingface_hub import login
-from datasets import load_dataset, load_from_disk, Dataset
-from transformers import AutoProcessor, Qwen2_5_VLForConditionalGeneration
+from transformers import AutoProcessor, Mistral3ForConditionalGeneration, MistralCommonBackend,  FineGrainedFP8Config
+from datasets import Dataset
 from peft import LoraConfig, get_peft_model
-
-from math_verify import LatexExtractionConfig, parse, verify
-from latex2sympy2_extended import NormalizationConfig
-from typing import Optional
 from trl import GRPOConfig, GRPOTrainer
 from PIL import Image
 from reward_functions import format_reward, accuracy_reward, reasoning_reward
-
+from io import BytesIO
+import base64
 import torch
 import re
 import json
 import os
 
+SYSTEM_PROMPT_NO_REASONING = """
+    你是一個專業的商品計數助手,負責根據圖片進行商品辨識與數量統計。
 
+    你必須嚴格遵守以下規則,不可自行解讀或發揮,所有規則具有強制性:
+
+    【全域輸出規則 (最優先,適用所有模式)】
+    ─ 所有最終答案**必須**放在answer標籤之中 answer標籤為<answer></answer>
+    ─ 除了 answer標籤 之外,不得輸出任何其他文字。
+    ─ 一律只計算「最前排、完整可見」的商品。
+    ─ 一律使用『繁體中文』回答,商品品牌名稱保持原文,不可翻譯。
+
+    【模式判斷 (第二優先)】
+    ─ 若使用者輸入『請進行商品盤點』,進入【全商品盤點模式】。
+    ─ 若使用者輸入非『請進行商品盤點』文字,進入【指定商品統計模式】。
+
+    【全商品盤點模式】
+    ─ 列出圖片中『所有可辨識的商品名稱』與『對應顏色』與『數量』。
+    ─ answer標籤之中的格式必須為:
+       商品名稱(顏色):數量,商品名稱(顏色):數量
+    ─ 範例:ALISA橄欖罐頭(白):4,醃漬罐頭(紅):2,醃漬罐頭(黃):2
+    ─ 每一筆結果必須用半形逗號 , 隔開,不得換行,不得有多餘空格。
+    ─ 不可猜測、臆測、補全畫面中不存在的商品、顏色或數量。
+
+    【指定商品統計模式】
+    ─ 僅統計使用者指定的商品名稱、顏色或外觀特徵。
+    ─ 只要圖片中的商品名稱『包含』使用者輸入的關鍵字即視為符合(英文忽略大小寫)。
+    ─ 關鍵字可以是名稱或外觀特徵,例如:紅、藍、綠、黃、白色瓶蓋、藍色包裝、紫色標籤。
+    ─ 不可將其他品牌或不包含關鍵字的商品納入計算。
+    ─ 在此模式下,answer標籤只能包含『單一阿拉伯數字』,例如:<answer>3</answer>
+    ─ 若圖片中不存在符合條件的商品,必須輸出:
+       <answer>0</answer>
+    ─ 只要確認存在符合商品,answer標籤不可為 0。
+"""
+
+def pil_to_base64_url(img_pil):
+
+
+    buffered = BytesIO()
+    img_pil.save(buffered, format="JPEG")
+    img_bytes = buffered.getvalue()
+    img_base64 = base64.b64encode(img_bytes).decode('utf-8')
+    return f"data:image/jpeg;base64,{img_base64}"
 
 # Define resize_image function first
 def resize_image(img_pil, max_size=512):
@@ -52,8 +89,9 @@ for item in data:
         img = Image.open(image_path).convert('RGB')
         # Resize image to prevent token overflow
         img = resize_image(img, max_size=max_image_size)
+        img_base64_url = pil_to_base64_url(img)
         dataset_list.append({
-            'image': img,
+            'image_url': img_base64_url,
             'problem': item['question'],
             'solution': item['answer']
         })
@@ -75,16 +113,9 @@ print(f"Dataset columns: {train_dataset.column_names}")
 print(f"number of samples in train_dataset: {len(train_dataset)}")
 # print(f"number of samples in test_dataset: {len(test_dataset)}")
 
-model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
+model_id = "mistralai/Ministral-3-3B-Instruct-2512"
 processor = AutoProcessor.from_pretrained(model_id, use_fast=True, padding_side="left")
-
-SYSTEM_PROMPT = (
-    "你是一個專業的商品計數助手。\n"
-    "使用者會提供圖片並詢問可見商品的數量。\n"
-    "推理過程必須放在 <think></think> 裡，最終的數字答案需用阿拉伯數字回答，不包含單位並放在 <answer></answer> 裡。\n"
-    "如果使用者使用繁體中文提問，請以繁體中文回答。\n"
-    "當問題中同時包含英文品牌名稱與中文語句時，請以繁體中文回答；品牌名稱保持原文不翻譯。\n"
-)
+model = Mistral3ForConditionalGeneration.from_pretrained(model_id, device_map="auto", quantization_config=FineGrainedFP8Config(dequantize=True))
 
 def make_conversation(examples):
     """Transform function applied on-the-fly to avoid serialization issues with PIL Images"""
@@ -96,14 +127,14 @@ def make_conversation(examples):
 
     if is_batched:
         conversations = []
-        for img, problem in zip(examples["image"], examples["problem"]):
+        for image_url, problem in zip(examples["image_url"], examples["problem"]):
             conversation = [
-                {"role": "system", "content": SYSTEM_PROMPT},
+                {"role": "system", "content": SYSTEM_PROMPT_NO_REASONING},
                 {
                     "role": "user",
                     "content": [
-                        {"type": "image", "image": img},
                         {"type": "text", "text": problem},
+                        {"type": "image_url", "image_url": {"url": image_url}},
                     ],
                 },
             ]
@@ -111,12 +142,12 @@ def make_conversation(examples):
         examples["prompt"] = conversations
     else:
         conversation = [
-            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "system", "content": SYSTEM_PROMPT_NO_REASONING},
             {
                 "role": "user",
                 "content": [
-                    {"type": "image", "image": examples["image"]},
                     {"type": "text", "text": examples["problem"]},
+                    {"type": "image_url", "image_url": {"url": examples["image_url"]}},
                 ],
             },
         ]
@@ -135,14 +166,6 @@ train_dataset.set_transform(make_conversation)
 print(f"processed train_dataset: \n {train_dataset}")
 
 
-
-# load base model Qwen/Qwen2.5-VL-3B-Instruct
-model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-    pretrained_model_name_or_path=model_id,
-    dtype=torch.bfloat16,
-    device_map="auto",
-)
-
 # We’ll leverage LoRA for training the model, so let’s configure it
 lora_config = LoraConfig(
     task_type="CAUSAL_LM",
@@ -160,7 +183,7 @@ model.print_trainable_parameters()
 
 # Configure training arguments using GRPOConfig
 training_args = GRPOConfig(
-    output_dir="checkpoints/Qwen2.5-VL-3B-Custom-size-768-3-reward-metrics-10000epochs",
+    output_dir="checkpoints/Ministral-3-3B-Custom-2512-size-768-3-reward-metrics-10000epochs",
     learning_rate=1e-5,
     remove_unused_columns=False, # to access the solution column in accuracy_reward
     num_train_epochs=10000,
