@@ -1,3 +1,4 @@
+import time
 from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 from datasets import Dataset
 import torch
@@ -6,7 +7,7 @@ import os
 from PIL import Image
 
 # Load dataset
-def resize_image(img_pil, max_size=512):
+def resize_image(img_pil, max_size=768):
     """調整圖片大小"""
     width, height = img_pil.size
     if width > max_size or height > max_size:
@@ -19,28 +20,13 @@ def resize_image(img_pil, max_size=512):
         return img_pil.resize((new_width, new_height), Image.LANCZOS)
     return img_pil
 
+
 # Load custom training data from JSON
-
-
 images_dir = './training_data/images'
-MAX_IMAGE_SIZE = 512  # Set maximum image size to fit within token limits
-
-
 
 # Load model
 base_model_id = "Qwen/Qwen2.5-VL-3B-Instruct"
 
-print("Loading processor...")
-processor = AutoProcessor.from_pretrained(base_model_id, use_fast=True, padding_side="left")
-
-print("Loading base model...")
-base_model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
-    base_model_id,
-    torch_dtype=torch.bfloat16,
-    device_map="auto",
-)
-base_model.eval()
-print("Base model loaded!")
 
 # System prompt
 SYSTEM_PROMPT = """
@@ -78,66 +64,107 @@ SYSTEM_PROMPT = """
     "20. 只要確認存在符合商品，answer標籤不可為 0。"
 """
 
-image_path = os.path.join(images_dir, '1.jpg')
-img = Image.open(image_path).convert("RGB")
-image = resize_image(img, max_size=MAX_IMAGE_SIZE)
-question = "請進行商品盤點"
 
-print(f"\nQuestion: {question}")
-# print(f"Ground Truth: {ground_truth}")
+class QwenVLM():
+    def __init__(self):
+        # Load model
+        print("Loading processor...")
+        self.processor = AutoProcessor.from_pretrained(base_model_id, use_fast=True, padding_side="left")
 
-# Create conversation
-conversation = [
-    {"role": "system", "content": SYSTEM_PROMPT},
-    {
-        "role": "user",
-        "content": [
-            {"type": "image", "image": image},
-            {"type": "text", "text": question},
-        ],
-    },
-]
+        print("Loading base model...")
+        self.base_model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
+            base_model_id,
+            torch_dtype=torch.bfloat16,
+            device_map="auto",
+        )
+        self.base_model.eval()
+        print("Base model loaded!")
 
-# Apply chat template
-prompt = processor.apply_chat_template(conversation, add_generation_prompt=True, tokenize=False)
+    def generate(self, image_path, question = "Count all products in the image."):
+        img = Image.open(image_path).convert("RGB")
+        image = resize_image(img)
+        
 
-# Generate with BASE MODEL only
-print("\nGenerating response with BASE MODEL...")
-inputs = processor(
-    text=[prompt],
-    images=[image],
-    return_tensors="pt",
-    padding=True,
-).to(base_model.device)
+        # Create conversation
+        message = [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {
+                "role": "user",
+                "content": [
+                    {"type": "image", "image": image},
+                    {"type": "text", "text": question},
+                ],
+            },
+        ]
 
-with torch.no_grad():
-    output_ids = base_model.generate(
-        **inputs,
-        max_new_tokens=4096,
-        do_sample=False,
-        # temperature=0.7,
-        # top_p=0.95,
-    )
+        # Apply chat template
+        prompt = self.processor.apply_chat_template(message, add_generation_prompt=True, tokenize=False)
 
-# Decode base model response
-generated_ids = output_ids[:, inputs.input_ids.shape[1]:]
-response = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
+        # Generate with BASE MODEL only
+        print("\nGenerating response with BASE MODEL...")
+        inputs = self.processor(
+            text=[prompt],
+            images=[image],
+            return_tensors="pt",
+            padding=True,
+        ).to(self.base_model.device)
 
-print("\n" + "="*80)
-print("BASE MODEL RESPONSE:")
-print("="*80)
-print(response)
+        with torch.no_grad():
+            output_ids = self.base_model.generate(
+                **inputs,
+                max_new_tokens=4096,
+                do_sample=False,
+                # temperature=0.7,
+                # top_p=0.95,
+            )
 
-# # Analysis Summary
-# print("\n" + "="*80)
-# print("ANALYSIS SUMMARY")
-# print("="*80)
-# print(f"Ground Truth: {ground_truth}")
-# print("\nBase Model Response:")
-# print(f"  - Uses <think></think> format: {'Yes' if '<think>' in response and '</think>' in response else 'No'}")
-# print(f"  - Uses <answer></answer> format: {'Yes' if '<answer>' in response and '</answer>' in response else 'No'}")
-# print("="*80)
+        # Decode base model response
+        generated_ids = output_ids[:, inputs.input_ids.shape[1]:]
+        response = self.processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
+        print(response)
+        return response
 
-# # Save image
-# image.save("test_dataset_0_image.png")
-# print("\nTest image saved as: test_dataset_0_image.png")
+if __name__ == "__main__":
+    qwenVLM = QwenVLM()
+
+    image_list = ["2.jpg", "3.jpg", "4.jpg", "11.jpg", "15.jpg", "101.jpg", "104.jpg"]
+
+    image_list_d = ["2.jpg", "3.jpg", "4.jpg", "11.jpg", "15.jpg"]
+    questions = [
+        "圖中有幾包沙拉", 
+        "圖中有幾盒紅色的餅乾盒",
+        "圖中有幾個麵包的標籤是紅色的",
+        "圖中有幾罐紅色的醬",
+        "圖中有幾個罐頭的蓋子是米色的",
+    ]
+
+    image_list_2 =["101.jpg"]
+
+    sum_time_elapsed_1 = 0
+    sum_time_elapsed_2 = 0
+    for img_name, question in zip(image_list_d, questions):
+
+        image_path = os.path.join(images_dir, img_name)
+
+        # calaulate time elapsed
+        print('=' * 20)
+        start_time_1 = time.time()
+        qwenVLM.generate(image_path, question=question)
+        end_time_1 = time.time()
+        time_elapsed_1 = end_time_1 - start_time_1
+        print(f"Time elapsed: {time_elapsed_1} seconds")
+        sum_time_elapsed_1 += time_elapsed_1
+        print('=' * 20)
+
+        # print('+' * 20)
+        # start_time_2 = time.time()
+        # ministralVLM.generate(image_path,system_prompt_mode=2)
+        # end_time_2 = time.time()
+        # time_elapsed_2 = end_time_2 - start_time_2
+        # print(f"Time elapsed: {time_elapsed_2} seconds")
+        # sum_time_elapsed_2 += time_elapsed_2
+        # print('+' * 20)
+
+    print(f"Average Time elapsed (No Reasoning): {sum_time_elapsed_1/len(image_list)} seconds")
+    print(f"Average Time elapsed (With Reasoning): {sum_time_elapsed_2/len(image_list)} seconds")
+

@@ -141,7 +141,7 @@ SYSTEM_PROMPT = """
 """
 
 images_dir = './training_data/images'
-model_id = "mistralai/Ministral-3-3B-Instruct-2512"
+model_id = "unsloth/Ministral-3-3B-Instruct-2512"
 
 # Load dataset
 def resize_image(img_pil, max_size=768):
