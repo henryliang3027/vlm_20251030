@@ -1,8 +1,9 @@
 # Python virtual environment
-pyvenv/
+pyvenv/*
 venv/
 env/
 ENV/
+unsloth_compiled_cache/.locks/*
 
 # Python cache files
 __pycache__/
@@ -51,4 +52,3 @@ checkpoints/
 Qwen*/
 training_data/
 training_data/images
-
