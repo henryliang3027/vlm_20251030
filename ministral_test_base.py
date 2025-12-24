@@ -102,7 +102,6 @@ SYSTEM_PROMPT_NO_REASONING = """
 """
 
 
-
 SYSTEM_PROMPT = """
     你是一個專業的商品計數助手,負責根據圖片進行商品辨識與數量統計。
 
@@ -140,8 +139,9 @@ SYSTEM_PROMPT = """
     ─ 只要確認存在符合商品,answer標籤不可為 0。
 """
 
-images_dir = './training_data/images'
+images_dir = "./training_data/images"
 model_id = "unsloth/Ministral-3-3B-Instruct-2512"
+
 
 # Load dataset
 def resize_image(img_pil, max_size=768):
@@ -157,8 +157,8 @@ def resize_image(img_pil, max_size=768):
         return img_pil.resize((new_width, new_height), Image.LANCZOS)
     return img_pil
 
-# Load custom training data from JSON
 
+# Load custom training data from JSON
 
 
 def pil_to_base64_url(img_pil):
@@ -168,22 +168,27 @@ def pil_to_base64_url(img_pil):
     buffered = BytesIO()
     img_pil.save(buffered, format="JPEG")
     img_bytes = buffered.getvalue()
-    img_base64 = base64.b64encode(img_bytes).decode('utf-8')
+    img_base64 = base64.b64encode(img_bytes).decode("utf-8")
     return f"data:image/jpeg;base64,{img_base64}"
 
 
-
-class MinistralVLM():
+class MinistralVLM:
     def __init__(self):
-        
-        self.tokenizer = MistralCommonBackend.from_pretrained(model_id)
-        self.model = Mistral3ForConditionalGeneration.from_pretrained(model_id, device_map="auto")
 
-    def generate(self, image_path, question = "Count all products in the image.", system_prompt_mode=1):
+        self.tokenizer = MistralCommonBackend.from_pretrained(model_id)
+        self.model = Mistral3ForConditionalGeneration.from_pretrained(
+            model_id, device_map="auto"
+        )
+
+    def generate(
+        self,
+        image_path,
+        question="Count all products in the image.",
+        system_prompt_mode=1,
+    ):
         img_pil = Image.open(image_path).convert("RGB")
         img_pil = resize_image(img_pil)
         image_url = pil_to_base64_url(img_pil)
-        
 
         if system_prompt_mode == 1:
             system_prompt = SYSTEM_PROMPT_FULL_INVENTORY
@@ -201,10 +206,14 @@ class MinistralVLM():
             },
         ]
 
-        tokenized = self.tokenizer.apply_chat_template(messages, return_tensors="pt", return_dict=True)
+        tokenized = self.tokenizer.apply_chat_template(
+            messages, return_tensors="pt", return_dict=True
+        )
 
         tokenized["input_ids"] = tokenized["input_ids"].to(device="cuda")
-        tokenized["pixel_values"] = tokenized["pixel_values"].to(dtype=torch.bfloat16, device="cuda")
+        tokenized["pixel_values"] = tokenized["pixel_values"].to(
+            dtype=torch.bfloat16, device="cuda"
+        )
         image_sizes = [tokenized["pixel_values"].shape[-2:]]
 
         output = self.model.generate(
@@ -213,19 +222,16 @@ class MinistralVLM():
             max_new_tokens=512,
         )[0]
 
-        decoded_output = self.tokenizer.decode(output[len(tokenized["input_ids"][0]):])
+        decoded_output = self.tokenizer.decode(output[len(tokenized["input_ids"][0]) :])
         print(decoded_output)
         return decoded_output
-
-
-
 
 
 if __name__ == "__main__":
     ministralVLM = MinistralVLM()
 
     image_list = ["2.jpg", "3.jpg", "4.jpg", "11.jpg", "15.jpg", "101.jpg", "104.jpg"]
-    image_list_2 =["101.jpg"]
+    image_list_2 = ["c93.jpg"]
 
     sum_time_elapsed_1 = 0
     sum_time_elapsed_2 = 0
@@ -234,14 +240,16 @@ if __name__ == "__main__":
         image_path = os.path.join(images_dir, img_name)
 
         # calaulate time elapsed
-        print('=' * 20)
+        print("=" * 20)
         start_time_1 = time.time()
-        ministralVLM.generate(image_path, question="How many green tea boxes are there in the image?", system_prompt_mode=2)
+        ministralVLM.generate(
+            image_path, question="統計圖中的商品", system_prompt_mode=2
+        )
         end_time_1 = time.time()
         time_elapsed_1 = end_time_1 - start_time_1
         print(f"Time elapsed: {time_elapsed_1} seconds")
         sum_time_elapsed_1 += time_elapsed_1
-        print('=' * 20)
+        print("=" * 20)
 
         # print('+' * 20)
         # start_time_2 = time.time()
@@ -252,8 +260,9 @@ if __name__ == "__main__":
         # sum_time_elapsed_2 += time_elapsed_2
         # print('+' * 20)
 
-    print(f"Average Time elapsed (No Reasoning): {sum_time_elapsed_1/len(image_list)} seconds")
-    print(f"Average Time elapsed (With Reasoning): {sum_time_elapsed_2/len(image_list)} seconds")
-
-
-    
+    print(
+        f"Average Time elapsed (No Reasoning): {sum_time_elapsed_1/len(image_list)} seconds"
+    )
+    print(
+        f"Average Time elapsed (With Reasoning): {sum_time_elapsed_2/len(image_list)} seconds"
+    )
