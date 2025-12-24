@@ -6,6 +6,9 @@ env/
 ENV/
 unsloth_compiled_cache/*
 unsloth_compiled_cache/.locks/*
+lora_model/*
+outputs*/*
+tvenv/*
 
 # Python cache files
 __pycache__/
@@ -55,3 +58,4 @@ Qwen*/
 training_data/
 training_data/images
 .gitignore
+
