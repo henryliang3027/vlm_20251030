@@ -132,7 +132,9 @@ def inference(model, pil_image):
             ],
         },
     ]
-    input_text = tokenizer.apply_chat_template(messages, add_generation_prompt=True)
+    input_text = tokenizer.apply_chat_template(
+        messages, tokenize=False, add_generation_prompt=True
+    )
     inputs = tokenizer(
         pil_image,
         input_text,
@@ -140,22 +142,38 @@ def inference(model, pil_image):
         return_tensors="pt",
     ).to("cuda")
 
-    from transformers import TextStreamer
-
-    text_streamer = TextStreamer(tokenizer, skip_prompt=True)
-    _ = model.generate(
+    finetuned_output_ids = model.generate(
         **inputs,
-        streamer=text_streamer,
         max_new_tokens=1000,
         use_cache=True,
         temperature=1.5,
         min_p=0.1,
     )
 
+    # Decode fine-tuned model response
+    finetuned_generated_ids = finetuned_output_ids[:, inputs.input_ids.shape[1] :]
+    response = tokenizer.batch_decode(
+        finetuned_generated_ids, skip_special_tokens=True
+    )[0]
+
+    # from transformers import TextStreamer
+
+    # text_streamer = TextStreamer(tokenizer, skip_prompt=True)
+    # _ = model.generate(
+    #     **inputs,
+    #     streamer=text_streamer,
+    #     max_new_tokens=1000,
+    #     use_cache=True,
+    #     temperature=1.5,
+    #     min_p=0.1,
+    # )
+
+    return response
+
 
 if __name__ == "__main__":
     model, tokenizer = FastVisionModel.from_pretrained(
-        model_name="outputs/checkpoint-2500",
+        model_name="unsloth/Ministral-3-3B-Instruct-2512",
         load_in_4bit=True,  # Use 4bit to reduce memory use. False for 16bit LoRA.
     )
 
@@ -173,4 +191,7 @@ if __name__ == "__main__":
     for img_name in images:
         image_path = os.path.join(images_dir, img_name)
         img = Image.open(image_path).convert("RGB")
-        inference(model, img)
+        response = inference(model, img)
+        print(img_name)
+        print(response)
+        print("=" * 80)

@@ -149,9 +149,6 @@ def inference(model, pil_image):
 
 
 if __name__ == "__main__":
-    ministral_models = [
-        "unsloth/Ministral-3-3B-Instruct-2512",  # Ministral instruct models
-    ]  # More models at https://huggingface.co/unsloth
 
     model, tokenizer = FastVisionModel.from_pretrained(
         "unsloth/Ministral-3-3B-Instruct-2512",
@@ -187,7 +184,7 @@ if __name__ == "__main__":
             per_device_train_batch_size=4,
             gradient_accumulation_steps=2,
             # warmup_steps=5,
-            max_steps=2500,
+            max_steps=500,
             save_steps=100,
             # num_train_epochs = 1, # Set this instead of max_steps for full training runs
             learning_rate=1e-5,
@@ -198,7 +195,7 @@ if __name__ == "__main__":
             weight_decay=0.001,
             lr_scheduler_type="linear",
             seed=3407,
-            output_dir="outputs",
+            output_dir="outputs_unsloth20251209",
             report_to="tensorboard",  # For Weights and Biases
             # You MUST put the below items for vision finetuning:
             remove_unused_columns=False,
@@ -210,13 +207,11 @@ if __name__ == "__main__":
 
     trainer_stats = trainer.train()
 
-    model.save_pretrained("lora_model")  # Local saving
-    tokenizer.save_pretrained("lora_model")
+    model.save_pretrained("finetune_model")  # Local saving
+    tokenizer.save_pretrained("finetune_model")
 
-    # print(converted_dataset[0])
-
-    # # Test inference on first sample
-    # print("Running inference on first sample...")
-    # image_path = os.path.join(images_dir, "c1.jpg")
-    # img = Image.open(image_path).convert("RGB")
-    # inference(model, img)
+    model.save_pretrained_gguf(
+        "finetune_model",
+        tokenizer,
+        quantization_method="q4_k_m",
+    )
