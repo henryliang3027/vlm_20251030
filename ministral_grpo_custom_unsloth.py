@@ -195,7 +195,7 @@ if __name__ == "__main__":
             weight_decay=0.001,
             lr_scheduler_type="linear",
             seed=3407,
-            output_dir="outputs_unsloth20251209",
+            output_dir="outputs_300",
             report_to="tensorboard",  # For Weights and Biases
             # You MUST put the below items for vision finetuning:
             remove_unused_columns=False,
@@ -209,9 +209,13 @@ if __name__ == "__main__":
 
     model.save_pretrained("finetune_model")  # Local saving
     tokenizer.save_pretrained("finetune_model")
+    model.save_pretrained_merged(
+        "finetune_model_merged",
+        tokenizer,
+    )
 
     model.save_pretrained_gguf(
-        "finetune_model",
+        "finetune_model_gguf",
         tokenizer,
-        quantization_method="q4_k_m",
+        # quantization_method="q4_k_m",
     )

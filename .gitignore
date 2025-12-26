@@ -61,3 +61,13 @@ training_data/images
 .gitignore
 
 
+Ministral-3-3B-Instruct-2512-Q4_K_M.gguf
+.gitignore
+Ministral-3-3B-Instruct-2512.BF16.gguf
+mmproj-F16.gguf
+my_gguf_mmproj.gguf
+my_gguf_Q4_K_M.gguf
+my_gguf.gguf
+unsloth_finetune_merged.BF16.gguf
+finetune_model/*
+finetune_model_merged/*
