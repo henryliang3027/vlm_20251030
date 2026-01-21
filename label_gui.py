@@ -10,8 +10,8 @@ from nicegui import ui
 # ministralVLM = MinistralVLM()
 
 # Load the training data
-json_path = Path(__file__).parent / "training_data" / "main.json"
-images_dir = Path(__file__).parent / "training_data" / "images"
+json_path = Path(__file__).parent / "testing_data" / "test.json"
+images_dir = Path(__file__).parent / "testing_data" / "images"
 
 with open(json_path, "r", encoding="utf-8") as f:
     data = json.load(f)

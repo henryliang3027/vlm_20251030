@@ -71,3 +71,5 @@ my_gguf.gguf
 unsloth_finetune_merged.BF16.gguf
 finetune_model/*
 finetune_model_merged/*
+testing_data/*
+training_data_synth/*

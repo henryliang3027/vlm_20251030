@@ -171,6 +171,7 @@ if __name__ == "__main__":
         loftq_config=None,  # And LoftQ
         # target_modules = "all-linear", # Optional now! Can specify a list if needed
     )
+    model.print_trainable_parameters()
 
     raw_datalist = get_raw_datalist()
     converted_dataset = [convert_to_conversation(sample) for sample in raw_datalist]
