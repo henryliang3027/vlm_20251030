@@ -73,3 +73,4 @@ finetune_model/*
 finetune_model_merged/*
 testing_data/*
 training_data_synth/*
+finetune_qwen3/*

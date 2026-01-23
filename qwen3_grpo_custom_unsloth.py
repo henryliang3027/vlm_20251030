@@ -322,7 +322,7 @@ if __name__ == "__main__":
         max_steps=600,
         save_steps=60,
         max_grad_norm=0.1,
-        report_to="none",  # Can use Weights & Biases
+        report_to="tensorboard",  # Can use Weights & Biases
         output_dir="outputs_qwen3_grpo_600",
         # Below enables GSPO:
         # importance_sampling_level = "sequence",
@@ -348,10 +348,4 @@ if __name__ == "__main__":
     model.save_pretrained_merged(
         "finetune_qwen3/merged",
         tokenizer,
-    )
-
-    model.save_pretrained_gguf(
-        "finetune_qwen3/gguf",
-        tokenizer,
-        # quantization_method="q4_k_m",
     )
